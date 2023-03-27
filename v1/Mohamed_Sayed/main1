@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+void main1();
+int main()
+{
+	main1();
+}
+void main1()
+{
+	int x;
+cin >> x;
+	cout << "Enter 1 to register or 2 to login";
+	if (x == 1)
+	{
+		register_();
+	}
+	else if (x == 2)
+	{
+		login_();
+	}
+}

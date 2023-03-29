@@ -122,7 +122,7 @@ void update_data() {
 		}
 		passwords.close();
 	}
-	 
+
 	int initial_ID = 100;
 	for (int k = 0; k <= no_actualusers; k++) {
 		customer[k].id = initial_ID;
@@ -171,7 +171,7 @@ void register_() {
 		system("pause");
 		register_();
 	}
-	
+
 
 	cout << "Type your password: ";
 	cin >> customer[last_index].password;
@@ -277,6 +277,10 @@ void login_() {
 
 bool update_information(int index_no) {
 	system("CLS");
+	bool email_check1;
+	bool email_check2;
+	int len_phone;
+	int j;
 	cout << " \t SuperMarket Online Shopping" << endl;
 	cout << "*****************************************************" << endl;
 	cout << "\n";
@@ -346,7 +350,7 @@ bool update_information(int index_no) {
 		cout << "Enter Your new phone number: ";
 		cin >> customer[index_no].phone_number;
 		cin.ignore();
-		int len_phone = customer[user_index].phone_number.length();
+		len_phone = customer[user_index].phone_number.length();
 		if (len_phone != 11) {
 			cout << "Wrong phone number" << endl;
 			cout << "Sorry try again..." << endl;
@@ -389,9 +393,9 @@ bool update_information(int index_no) {
 		cout << "Enter Your new email: ";
 		cin >> customer[index_no].email;
 		cin.ignore();
-		int j = 0;
-		bool email_check1 = false; //to check @
-		bool email_check2 = false; // to check .
+		j = 0;
+		email_check1 = false; //to check @
+		email_check2 = false; // to check .
 		while (customer[user_index].email[j] != '\0') {
 			if (customer[user_index].email[j] == '@') {
 				email_check1 = true;

@@ -369,12 +369,19 @@ bool view_products(int number) {
 		}
 		break;
 	}
+	/*
+	// msh hnkhleha do while 3shan kda bgbrh hta lw das no byzhrhlh categories tany 3shan code kolh bytnfz fy awl mra mn gher ma ycheck condition
 	do {
 		cout << "Do you want to buy again? y/n: ";
 		cin >> buy_again;
 		view_categories();
 	} while (buy_again =='y' || buy_again == 'Y');
-	
+	*/
+	cout << "Do you want to buy again? y/n: ";
+	cin >> buy_again;
+	while (buy_again == 'y' || buy_again == 'Y') {
+		view_categories();
+	}
 
 
 

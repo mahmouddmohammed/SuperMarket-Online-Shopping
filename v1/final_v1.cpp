@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
 using namespace std;
+
 void update_data();
 void login_register_menu();
 void login_();
@@ -12,6 +12,8 @@ bool update_information(int index_no);
 
 const int no_customers = 100;
 int no_actualusers = 2; //one- Based
+int user_index;
+
 struct users_information {
 	int id;
 	string name;
@@ -50,13 +52,15 @@ void login_register_menu() {
 		login_();
 		break;
 	default:
-		cout << "Invalid Input";
+		cout << "Invalid Input" << endl;
+		system("pause");
+		login_register_menu();
 		break;
 	}
 }
 
 void update_data() {
-	
+
 	customer[0].name = "user1";
 	customer[0].email = "user1@gmail.com";
 	customer[0].location = "elzmalek";
@@ -70,7 +74,7 @@ void update_data() {
 	customer[1].password = "222";
 
 
-	
+
 
 	int i = 2;
 	fstream names, emails, locations, phones, passwords;
@@ -85,7 +89,7 @@ void update_data() {
 
 	i = 2;
 	emails.open("emails.txt", ios::in);
-	if (emails.is_open()) { 
+	if (emails.is_open()) {
 		while (getline(emails, customer[i].email)) {
 			i++;
 		}
@@ -118,14 +122,14 @@ void update_data() {
 		}
 		passwords.close();
 	}
-
+	 
 	int initial_ID = 100;
-	for (int k = 0; k <= no_actualusers; k++) { 
+	for (int k = 0; k <= no_actualusers; k++) {
 		customer[k].id = initial_ID;
 		initial_ID++;
 	}
 
-	
+
 }
 
 
@@ -140,24 +144,34 @@ void register_() {
 	int last_index = no_actualusers;
 
 	cout << "Type your name: ";
-	
+
 	getline(cin, customer[last_index].name);
 
 	cout << "Type your email: ";
 	cin >> customer[last_index].email;
-	
+	cin.ignore();
 	int j = 0;
-	bool email_check = false;
+	bool email_check1 = false; //to check @
+	bool email_check2 = false; // to check .
 	while (customer[last_index].email[j] != '\0') {
 		if (customer[last_index].email[j] == '@') {
-			email_check = true;
+			email_check1 = true;
+		}
+		if (customer[last_index].email[j] == '.') {
+			email_check2 = true;
 		}
 		j++;
 	}
-	if (!email_check) { 
+	if (email_check1 && email_check2) {
+		cout << "Correct Email , Please continue" << endl;
+	}
+	else {
 		cout << "Wrong email" << endl;
 		cout << "Sorry try again..." << endl;
+		system("pause");
+		register_();
 	}
+	
 
 	cout << "Type your password: ";
 	cin >> customer[last_index].password;
@@ -169,6 +183,8 @@ void register_() {
 	if (len_phone != 11) {
 		cout << "Wrong phone number" << endl;
 		cout << "Sorry try again..." << endl;
+		system("pause");
+		register_();
 	}
 
 	cout << "Type your location: ";
@@ -237,13 +253,14 @@ void login_() {
 		if (email_login == customer[i].email && password_login == customer[i].password) {
 			login_success = true;
 			no_index = i;
+			user_index = i;
 			break;
 		}
 	}
 	if (login_success) {
 		cout << "Your ID: " << customer[no_index].id << endl;
 		cout << "Login Success" << endl;
-		cout << "Do you wanna modify your information: ?" << endl;
+		cout << "Do you wanna modify your information? y/n: ";
 		cin >> modify;
 		if (modify == 'y' || modify == 'Y') {
 			update_information(no_index);
@@ -252,27 +269,41 @@ void login_() {
 	else {
 		cout << "Invalid email or password" << endl;
 		cout << "if you dont register , you have to register first";
+		login_register_menu();
 
 	}
 
 }
 
 bool update_information(int index_no) {
+	system("CLS");
+	cout << " \t SuperMarket Online Shopping" << endl;
+	cout << "*****************************************************" << endl;
+	cout << "\n";
+	cout << " \t Welcome to Update-Information page" << endl;
+	cout << " \t No of actual users: " << no_actualusers << endl;
+	cout << "\n";
+	cout << "****************Please write carefully****************" << endl;
 	if (customer[index_no].name == "user1" || customer[index_no].name == "user2") {
+		cout << "Sorry , Data of user1 & user2 cant be changed" << endl;
 		return false;
 	}
 	cout << "what do you wanna change in your profile information" << endl;
-	cout << "1-for name \t 2-for password \t 3-for phone_number \t 4-for location \t 5-email" << endl;
 	cout << "Sorry, ID CAN'T BE CHANGED ^3" << endl;
-	
+	cout << "1. Name" << endl;
+	cout << "2. Password" << endl;
+	cout << "3. Phone Number" << endl;
+	cout << "4. Location" << endl;
+	cout << "5. Email" << endl;
 	int no;
 	const int no_lines = no_actualusers;
+	cout << "Enter Number: ";
 	cin >> no;
 	cin.ignore();
 	fstream update_data;
 	string backup[no_customers];
 	int i = 0;
-	
+
 	switch (no) {
 	case 1:
 		cout << "Enter Your new name: ";
@@ -295,6 +326,7 @@ bool update_information(int index_no) {
 	case 2:
 		cout << "Enter Your new password: ";
 		cin >> customer[index_no].password;
+		cin.ignore();
 		cout << "You changed your password" << endl;
 		update_data.open("passwords.txt", ios::out); // that's output will make overwrite 
 		if (update_data.is_open()) {
@@ -313,6 +345,14 @@ bool update_information(int index_no) {
 	case 3:
 		cout << "Enter Your new phone number: ";
 		cin >> customer[index_no].phone_number;
+		cin.ignore();
+		int len_phone = customer[user_index].phone_number.length();
+		if (len_phone != 11) {
+			cout << "Wrong phone number" << endl;
+			cout << "Sorry try again..." << endl;
+			system("pause");
+			update_information(user_index);
+		}
 		cout << "You changed your phone number" << endl;
 		update_data.open("phone_numbers.txt", ios::out); // that's output will make overwrite 
 		if (update_data.is_open()) {
@@ -348,6 +388,28 @@ bool update_information(int index_no) {
 	case 5:
 		cout << "Enter Your new email: ";
 		cin >> customer[index_no].email;
+		cin.ignore();
+		int j = 0;
+		bool email_check1 = false; //to check @
+		bool email_check2 = false; // to check .
+		while (customer[user_index].email[j] != '\0') {
+			if (customer[user_index].email[j] == '@') {
+				email_check1 = true;
+			}
+			if (customer[user_index].email[j] == '.') {
+				email_check2 = true;
+			}
+			j++;
+		}
+		if (email_check1 && email_check2) {
+			cout << "Valid email" << endl;
+		}
+		else {
+			cout << "Wrong email" << endl;
+			cout << "Sorry try again..." << endl;
+			system("pause");
+			update_information(user_index);
+		}
 		cout << "You successfully changed your email" << endl;
 		update_data.open("emails.txt", ios::out); // that's output will make overwrite 
 		if (update_data.is_open()) {
@@ -365,6 +427,7 @@ bool update_information(int index_no) {
 		break;
 	default:
 		cout << "Invalid Input" << endl;
+		update_information(user_index);
 		break;
 
 	}

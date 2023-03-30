@@ -59,12 +59,12 @@ void searchByName(string name_product);
 void view_categories();
 bool view_products(int);
 void products_data();
-void ProductionD(Category& nameofcategory,string date);
-void ExpirationD(Category& nameofcategory,string date);
+void ProductionD(Category& nameofcategory, string date);
+void ExpirationD(Category& nameofcategory, string date);
 string Product_RandomID(int from, int to);
 void product_information(Category nameOFcategory, int noOfProduct);
-order Cart(Category cat, int number);
-
+void Cart(Category cat, int number);
+double review_order();
 
 int main() {
 	update_data();
@@ -72,18 +72,7 @@ int main() {
 	products_data();
 	view_menu();
 
-	cout << counter_products << endl;
-	cout << order_products.CustomerID << endl;
-	/*
-	for (int i = 0; i < counter_products; i++) {
-		cout << order_products.products_names[i] << endl;
-		cout << order_products.products_categories[i] << endl;
-		cout << order_products.products_codes[i] << endl;
-		cout << order_products.prices[i] << endl;
-	}
-	*/
-
-	// review order function
+	int total_price = review_order(); //int 3shan tkon mn gher ksor
 
 	return 0;
 }
@@ -325,7 +314,7 @@ void login_() {
 	}
 	else {
 		cout << "Invalid email or password" << endl;
-		cout << "if you dont register , you have to register first";
+		cout << "if you dont register , you have to register first" << endl;
 		login_register_menu();
 
 	}
@@ -582,21 +571,21 @@ void products_data() {
 	HomeFurniture.products[8] = { "Sterilite Wide 4 Drawer","","",44.78 };
 	HomeFurniture.products[9] = { "Beautiful 6 Quart Touchscreen Air Fryer","","",69 };
 
-	ProductionD(Electronics,"6/5/2022");
-	ProductionD(VideoGames,"12/2/2022");
-	ProductionD(Groceries,"1/1/2022");
-	ProductionD(Office,"3/9/2022");
-	ProductionD(Beauty,"4/5/2022");
-	ProductionD(SportSupplies,"3/10/2022");
-	ProductionD(HomeFurniture,"2/9/2022");
+	ProductionD(Electronics, "6/5/2022");
+	ProductionD(VideoGames, "12/2/2022");
+	ProductionD(Groceries, "1/1/2022");
+	ProductionD(Office, "3/9/2022");
+	ProductionD(Beauty, "4/5/2022");
+	ProductionD(SportSupplies, "3/10/2022");
+	ProductionD(HomeFurniture, "2/9/2022");
 
-	ExpirationD(Electronics,"5/2/2023");
-	ExpirationD(VideoGames,"12/9/2023");
-	ExpirationD(Groceries,"5/6/2023");
-	ExpirationD(Office,"21/7/2023");
-	ExpirationD(Beauty,"22/6/2023");
-	ExpirationD(SportSupplies,"1/5/2023");
-	ExpirationD(HomeFurniture,"1/10/2023");
+	ExpirationD(Electronics, "5/2/2023");
+	ExpirationD(VideoGames, "12/9/2023");
+	ExpirationD(Groceries, "5/6/2023");
+	ExpirationD(Office, "21/7/2023");
+	ExpirationD(Beauty, "22/6/2023");
+	ExpirationD(SportSupplies, "1/5/2023");
+	ExpirationD(HomeFurniture, "1/10/2023");
 
 	for (int id_p = 0; id_p < 10; id_p++) {
 		Electronics.products[id_p].id = Product_RandomID(1000, 9000);
@@ -843,7 +832,7 @@ bool view_products(int number) {
 	*/
 	cout << "Do you want to buy again? y/n: ";
 	cin >> buy_again;
-	while (buy_again == 'y' || buy_again == 'Y') {
+	if (buy_again == 'y' || buy_again == 'Y') {
 		view_categories();
 	}
 
@@ -1038,22 +1027,23 @@ void product_information(Category nameOFcategory, int noOfProduct) {
 }
 
 
-order Cart(Category category_name, int number) {
+void Cart(Category category_name, int number) {
 	order_products.CustomerID = customer[user_index].id;
 	order_products.prices[counter_products] = category_name.products[number].price;
-	order_products.products_categories[counter_products] = category_name.products[number].price;
-	order_products.products_codes[counter_products] = category_name.products[number].price;
-	return order_products;
+	order_products.products_names[counter_products] = category_name.products[number].name;
+	order_products.products_categories[counter_products] = category_name.products[number].category;
+	order_products.products_codes[counter_products] = category_name.products[number].id;
+	//return order_products;
 	// order_products is the variable that has the data type of struct so you can use any member in it
 }
 
-void ProductionD(Category& nameofcategory,string date) {
+void ProductionD(Category& nameofcategory, string date) {
 	for (int i = 0; i < 10; i++) {
 		nameofcategory.products[i].production_date = date;
 	}
 }
 
-void ExpirationD(Category& nameofcategory,string date) {
+void ExpirationD(Category& nameofcategory, string date) {
 	for (int i = 0; i < 10; i++) {
 		nameofcategory.products[i].expiration_date = date;
 	}
@@ -1062,4 +1052,36 @@ void ExpirationD(Category& nameofcategory,string date) {
 string Product_RandomID(int from, int to) {
 	int RandomNumber = rand() % (to - from + 1) + from;
 	return  "#" + to_string(RandomNumber);
+}
+
+double review_order() {
+	system("CLS");
+	cout << "-THE CART-" << endl;
+	int total_price = 0;
+	cout << "Customer ID: " << order_products.CustomerID << endl;
+	cout << "No of products you bought: " << counter_products << endl;
+	cout << "--------------------------------------------------------" << endl;
+	for (int i = 0; i < counter_products; i++) {
+		cout << "Product " << i + 1 << endl;
+		cout << "Product Name: " << order_products.products_names[i] << endl;
+		cout << "Category of the product: " << order_products.products_categories[i] << endl;
+		cout << "Product Code: " << order_products.products_codes[i] << endl;
+		cout << "Product Price: " << order_products.prices[i] << endl;
+		cout << "--------------------------------------------------------" << endl;
+	}
+	for (int j = 0; j < counter_products; j++) {
+		total_price += order_products.prices[j];
+	}
+	char modify_order;
+	cout << "Do you wanna modify the order? y/n: ";
+	cin >> modify_order;
+	if (modify_order == 'y' || 'Y') {
+		// function of modify order
+		// calculate the total price and discount
+	}
+	else {
+		// calculate the total price and discount
+	}
+	// menu of log out
+	return total_price;
 }

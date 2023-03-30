@@ -59,8 +59,8 @@ void searchByName(string name_product);
 void view_categories();
 bool view_products(int);
 void products_data();
-void ProductionD(Category nameofcategory);
-void ExpirationD(Category nameofcategory);
+void ProductionD(Category& nameofcategory);
+void ExpirationD(Category& nameofcategory);
 string Product_RandomID(int from, int to);
 void product_information(Category nameOFcategory, int noOfProduct);
 order Cart(Category cat, int number);
@@ -1048,13 +1048,13 @@ order Cart(Category category_name, int number) {
 	// order_products is the variable that has the data type of struct so you can use any member in it
 }
 
-void ProductionD(Category nameofcategory) {
+void ProductionD(Category& nameofcategory) {
 	for (int i = 0; i < 10; i++) {
 		nameofcategory.products[i].production_date = "30/12/2022";
 	}
 }
 
-void ExpirationD(Category nameofcategory) {
+void ExpirationD(Category& nameofcategory) {
 	for (int i = 0; i < 10; i++) {
 		nameofcategory.products[i].expiration_date = "30/8/2023";
 	}

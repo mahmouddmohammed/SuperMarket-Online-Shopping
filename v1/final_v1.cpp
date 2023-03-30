@@ -59,8 +59,8 @@ void searchByName(string name_product);
 void view_categories();
 bool view_products(int);
 void products_data();
-void ProductionD(Category& nameofcategory);
-void ExpirationD(Category& nameofcategory);
+void ProductionD(Category& nameofcategory,string date);
+void ExpirationD(Category& nameofcategory,string date);
 string Product_RandomID(int from, int to);
 void product_information(Category nameOFcategory, int noOfProduct);
 order Cart(Category cat, int number);
@@ -71,7 +71,7 @@ int main() {
 	login_register_menu();
 	products_data();
 	view_menu();
-	
+
 	cout << counter_products << endl;
 	cout << order_products.CustomerID << endl;
 	/*
@@ -80,7 +80,6 @@ int main() {
 		cout << order_products.products_categories[i] << endl;
 		cout << order_products.products_codes[i] << endl;
 		cout << order_products.prices[i] << endl;
-
 	}
 	*/
 
@@ -583,21 +582,21 @@ void products_data() {
 	HomeFurniture.products[8] = { "Sterilite Wide 4 Drawer","","",44.78 };
 	HomeFurniture.products[9] = { "Beautiful 6 Quart Touchscreen Air Fryer","","",69 };
 
-	ProductionD(Electronics);
-	ProductionD(VideoGames);
-	ProductionD(Groceries);
-	ProductionD(Office);
-	ProductionD(Beauty);
-	ProductionD(SportSupplies);
-	ProductionD(HomeFurniture);
+	ProductionD(Electronics,"6/5/2022");
+	ProductionD(VideoGames,"12/2/2022");
+	ProductionD(Groceries,"1/1/2022");
+	ProductionD(Office,"3/9/2022");
+	ProductionD(Beauty,"4/5/2022");
+	ProductionD(SportSupplies,"3/10/2022");
+	ProductionD(HomeFurniture,"2/9/2022");
 
-	ExpirationD(Electronics);
-	ExpirationD(VideoGames);
-	ExpirationD(Groceries);
-	ExpirationD(Office);
-	ExpirationD(Beauty);
-	ExpirationD(SportSupplies);
-	ExpirationD(HomeFurniture);
+	ExpirationD(Electronics,"5/2/2023");
+	ExpirationD(VideoGames,"12/9/2023");
+	ExpirationD(Groceries,"5/6/2023");
+	ExpirationD(Office,"21/7/2023");
+	ExpirationD(Beauty,"22/6/2023");
+	ExpirationD(SportSupplies,"1/5/2023");
+	ExpirationD(HomeFurniture,"1/10/2023");
 
 	for (int id_p = 0; id_p < 10; id_p++) {
 		Electronics.products[id_p].id = Product_RandomID(1000, 9000);
@@ -1048,15 +1047,15 @@ order Cart(Category category_name, int number) {
 	// order_products is the variable that has the data type of struct so you can use any member in it
 }
 
-void ProductionD(Category& nameofcategory) {
+void ProductionD(Category& nameofcategory,string date) {
 	for (int i = 0; i < 10; i++) {
-		nameofcategory.products[i].production_date = "30/12/2022";
+		nameofcategory.products[i].production_date = date;
 	}
 }
 
-void ExpirationD(Category& nameofcategory) {
+void ExpirationD(Category& nameofcategory,string date) {
 	for (int i = 0; i < 10; i++) {
-		nameofcategory.products[i].expiration_date = "30/8/2023";
+		nameofcategory.products[i].expiration_date = date;
 	}
 }
 

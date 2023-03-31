@@ -1,5 +1,7 @@
 char RandomCharchters(char from, char to) {
+
 	return rand() % (to - from + 1) + from;
+	srand(time(NULL));
 }
 string Generatekey() {
 	string Key = "";

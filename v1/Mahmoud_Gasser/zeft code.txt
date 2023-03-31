@@ -1,0 +1,13 @@
+char RandomCharchters(char from, char to) {
+	return rand() % (to - from + 1) + from;
+}
+string Generatekey() {
+	string Key = "";
+	for (int j = 1; j <= 16; j++) {
+		Key += RandomCharchters('A', 'Z');
+		if (j % 4 == 0 && j != 16) {
+			Key += '-';
+		}
+	}
+	return Key;
+}

@@ -1098,10 +1098,24 @@ double review_order() {
 	system("CLS");
 	cout << "-THE CART-" << endl;
 	int total_price = 0;
+	int counter_key = 0;
 	cout << "Customer ID: " << order_products.CustomerID << endl;
 	cout << "No of products you bought: " << counter_products << endl;
 	cout << "--------------------------------------------------------" << endl;
 	for (int i = 0; i < counter_products; i++) {
+		if (order_products.products_categories[i] == "VideoGames - PlayStation 4" || order_products.products_categories[i] == "VideoGames - PlayStation 5") {
+			// hn3ml loop gwa array of video gmes keys aw laa w ehna m3ana kam video game keys
+			// w msh 3arf mmkn bdl if n3ml loop bdalha wla laa
+			cout << "Product " << i + 1 << endl;
+			cout << "Product Name: " << order_products.products_names[i] << endl;
+			cout << "Category of the product: " << order_products.products_categories[i] << endl;
+			cout << "Product Code: " << order_products.products_codes[i] << endl;
+			cout << "Serial Key to play online: " << videogames_keys[counter_key] << endl;
+			cout << "Product Price: " << order_products.products_prices[i] << "$" << endl;
+			cout << "--------------------------------------------------------" << endl;
+			counter_key++;
+			continue;
+		}
 		cout << "Product " << i + 1 << endl;
 		cout << "Product Name: " << order_products.products_names[i] << endl;
 		cout << "Category of the product: " << order_products.products_categories[i] << endl;

@@ -9,6 +9,7 @@ using namespace std;
 const int no_customers = 100;
 const int no_categories = 7;
 const int no_products = 10;
+int videogames_counter = 0;
 int no_actualusers = 2; //one- Based
 int user_index;
 int counter_products = 0;
@@ -696,7 +697,6 @@ bool view_products(int number) {
 	char buy_again;
 	bool make_order;
 	string key;
-	int videogames_counter = 0;
 	switch (number) {
 	case 1:
 		category_name = "Electronics";

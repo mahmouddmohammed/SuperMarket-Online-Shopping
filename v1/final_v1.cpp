@@ -519,15 +519,15 @@ void products_data() {
 	Electronics.products[0].id = "";
 	Electronics.products[0].category = "Electronics - Laptop";
 	Electronics.products[0].price = 1700;
-	Electronics.products[1] = { "Acer Aspire 5","dasdas","Electronics - Laptop",550 };
-	Electronics.products[2] = { "LG 55  Class 4K UHD 2160P","dasdas","Electronics - Laptop",360 };
-	Electronics.products[3] = { "LG 65  Class 4K UHD ","dasdas","Electronics - Laptop",1300 };
-	Electronics.products[4] = { "SAMSUNG 65 Class 4K Crystal","dasdas","Electronics - Laptop",478 };
-	Electronics.products[5] = { "Apple Watch Series 8 GPS","dasdas","Electronics - Laptop",360 };
-	Electronics.products[6] = { "SAMSUNG Galaxy Watch 4","dasdas","Electronics - Laptop",170 };
-	Electronics.products[7] = { "Gateway Notebook 11.6","dasdas","Electronics - Laptop",192 };
-	Electronics.products[8] = { "Straight Talk Apple iPhone 11, 64GB","dasdas","Electronics - Laptop",250 };
-	Electronics.products[9] = { "Apple iPhone 12, 64GB","dasdas","Electronics - Laptop",500 };
+	Electronics.products[1] = { "Acer Aspire 5","","Electronics - Laptop",550 };
+	Electronics.products[2] = { "LG 55  Class 4K UHD 2160P","","Electronics",360 };
+	Electronics.products[3] = { "LG 65  Class 4K UHD ","","Electronics",1300 };
+	Electronics.products[4] = { "SAMSUNG 65 Class 4K Crystal","","Electronics",478 };
+	Electronics.products[5] = { "Apple Watch Series 8 GPS","","Electronics",360 };
+	Electronics.products[6] = { "SAMSUNG Galaxy Watch 4","","Electronics",170 };
+	Electronics.products[7] = { "Gateway Notebook 11.6","","Electronics - Mobile Phones",192 };
+	Electronics.products[8] = { "Straight Talk Apple iPhone 11, 64GB","","Electronics - Mobile Phones",250 };
+	Electronics.products[9] = { "Apple iPhone 12, 64GB","","Electronics - Mobile Phones",500 };
 
 
 	VideoGames.products[0] = { "Red Dead Redemption 2","","VideoGames - PlayStation 4",20 };
@@ -541,60 +541,60 @@ void products_data() {
 	VideoGames.products[8] = { "Resident Evil 4","","VideoGames - PlayStation 4",60 };
 	VideoGames.products[9] = { "Hogwarts Legacy Deluxe Edition","","VideoGames - PlayStation 4",70 };
 
-	Groceries.products[0] = { "Cheddar Smoked Sausage","","",3.96 };
-	Groceries.products[1] = { "Freshness Guaranteed Boneless Chicken Thighs","","",11.38 };
-	Groceries.products[2] = { "Freshness Guaranteed Chicken Breast Tenderloins","","",8.94 };
-	Groceries.products[3] = { "HERSHEY'S and REESE'S, Chocolate Assortment Treats","","",7.48 };
-	Groceries.products[4] = { "CADBURY, MINI EGGS Milk Chocolate with a Crisp Sugar Shell","","",3.84 };
-	Groceries.products[5] = { "REESE'S, Assorted Milk Chocolate","","",10.98 };
-	Groceries.products[6] = { "Sadler's Smokehouse Mesquite Smoked Sliced Beef Brisket","","",23.04 };
-	Groceries.products[7] = { "Fresh Sweet Corn","","",0.60 };
-	Groceries.products[8] = { "Marketside Organic Spinach","","",5.13 };
-	Groceries.products[9] = { "Sweet Potatoes","","",4.24 };
+	Groceries.products[0] = { "Cheddar Smoked Sausage","","Groceries",3.96 };
+	Groceries.products[1] = { "Freshness Guaranteed Boneless Chicken Thighs","","Groceries",11.38 };
+	Groceries.products[2] = { "Freshness Guaranteed Chicken Breast Tenderloins","","Groceries",8.94 };
+	Groceries.products[3] = { "HERSHEY'S and REESE'S, Chocolate Assortment Treats","","Groceries",7.48 };
+	Groceries.products[4] = { "CADBURY, MINI EGGS Milk Chocolate with a Crisp Sugar Shell","","Groceries",3.84 };
+	Groceries.products[5] = { "REESE'S, Assorted Milk Chocolate","","Groceries",10.98 };
+	Groceries.products[6] = { "Sadler's Smokehouse Mesquite Smoked Sliced Beef Brisket","","Groceries",23.04 };
+	Groceries.products[7] = { "Fresh Sweet Corn","","Groceries",0.60 };
+	Groceries.products[8] = { "Marketside Organic Spinach","","Groceries",5.13 };
+	Groceries.products[9] = { "Sweet Potatoes","","Groceries",4.24 };
 
-	Office.products[0] = { "Vitesse Gaming Desk Computer Desk with Large Desk Mouse Pad","","", 110 };
-	Office.products[1] = { "FlexiSpot Home Office Height Adjustable Standing Desk","","",250 };
-	Office.products[2] = { "SHW Cyrus 38-Inch Desk with Shelves","","", 67 };
-	Office.products[3] = { "Techvida Rose gold desk organizer","","",17 };
-	Office.products[4] = { "Child Drawing Art Set / Kit with 210 Pieces","","", 20 };
-	Office.products[5] = { "Pentel RSVP Ballpoint Pen","","",0.96 };
-	Office.products[6] = { "Sheet High-Security Micro-Cut Paper Credit Card Shredder","","",41 };
-	Office.products[7] = { "Bostitch Office Heavy Duty Stapler","","",11 };
-	Office.products[8] = { "JIELISI 10in White Board","","", 12 };
-	Office.products[9] = { "Casio FX-991EX ","","", 18 };
+	Office.products[0] = { "Vitesse Gaming Desk Computer Desk with Large Desk Mouse Pad","","Office", 110 };
+	Office.products[1] = { "FlexiSpot Home Office Height Adjustable Standing Desk","","Office",250 };
+	Office.products[2] = { "SHW Cyrus 38-Inch Desk with Shelves","","Office", 67 };
+	Office.products[3] = { "Techvida Rose gold desk organizer","","Office",17 };
+	Office.products[4] = { "Child Drawing Art Set / Kit with 210 Pieces","","Office", 20 };
+	Office.products[5] = { "Pentel RSVP Ballpoint Pen","","Office",0.96 };
+	Office.products[6] = { "Sheet High-Security Micro-Cut Paper Credit Card Shredder","","Office",41 };
+	Office.products[7] = { "Bostitch Office Heavy Duty Stapler","","Office",11 };
+	Office.products[8] = { "JIELISI 10in White Board","","Office", 12 };
+	Office.products[9] = { "Casio FX-991EX ","","Office", 18 };
 
-	Beauty.products[0] = { "L'Oreal Paris Glow Paradise Lip Balm","","", 8 };
-	Beauty.products[1] = { "L'Oreal Paris Telescopic Lift Washable Makeup Mascara","","",12 };
-	Beauty.products[2] = { "Frozen 2 Lip Gloss","","", 5 };
-	Beauty.products[3] = { "Olay Regenerist Micro-Sculpting Cream Face Moisturizer","","",30 };
-	Beauty.products[4] = { "CeraVe Foaming Face Wash","","",14 };
-	Beauty.products[5] = { "Dyson Supersonic Hair Dryer","","",270 };
-	Beauty.products[6] = { "Head & Shoulders 2 in 1 Dandruff Shampoo and Conditioner","","",12 };
-	Beauty.products[7] = { "Lottie London Cheeky Kiss Lip & Cheek Stick","","",7 };
-	Beauty.products[8] = { "Kenneth Cole Black Body Spray for Men","","",9 };
-	Beauty.products[9] = { "Brickell Men's Purifying Charcoal Face Wash for Men","","",25 };
+	Beauty.products[0] = { "L'Oreal Paris Glow Paradise Lip Balm","","Beauty", 8 };
+	Beauty.products[1] = { "L'Oreal Paris Telescopic Lift Washable Makeup Mascara","","Beauty",12 };
+	Beauty.products[2] = { "Frozen 2 Lip Gloss","","Beauty", 5 };
+	Beauty.products[3] = { "Olay Regenerist Micro-Sculpting Cream Face Moisturizer","","Beauty",30 };
+	Beauty.products[4] = { "CeraVe Foaming Face Wash","","Beauty",14 };
+	Beauty.products[5] = { "Dyson Supersonic Hair Dryer","","Beauty",270 };
+	Beauty.products[6] = { "Head & Shoulders 2 in 1 Dandruff Shampoo and Conditioner","","Beauty",12 };
+	Beauty.products[7] = { "Lottie London Cheeky Kiss Lip & Cheek Stick","","Beauty",7 };
+	Beauty.products[8] = { "Kenneth Cole Black Body Spray for Men","","Beauty",9 };
+	Beauty.products[9] = { "Brickell Men's Purifying Charcoal Face Wash for Men","","Beauty",25 };
 
-	SportSupplies.products[0] = { "Franklin Sports Youth Baseball Backpack","","", 19.83 };
-	SportSupplies.products[1] = { "Rawlings R400 Baseball Youth Backpack","","",43 };
-	SportSupplies.products[2] = { "Rawlings Storm Girls Softball Bag","","",28 };
-	SportSupplies.products[3] = { "Easton Game Ready Baseball Backpack","","", 55 };
-	SportSupplies.products[4] = { "Bounce Pro 7-Foot  Trampoline","","", 123 };
-	SportSupplies.products[5] = { "Nike Phantom VSN 2 Elite","","", 272 };
-	SportSupplies.products[6] = { "Nike Junior Mercurialx Proximo II","","",90 };
-	SportSupplies.products[7] = { "Muck Kid's Rugged II Boot ","","",54 };
-	SportSupplies.products[8] = { "Duo Tennis Racquet set","","",35 };
-	SportSupplies.products[9] = { "Huffy 20 Boy Kids Bike","","", 78 };
+	SportSupplies.products[0] = { "Franklin Sports Youth Baseball Backpack","","SportSupplies", 19.83 };
+	SportSupplies.products[1] = { "Rawlings R400 Baseball Youth Backpack","","SportSupplies",43 };
+	SportSupplies.products[2] = { "Rawlings Storm Girls Softball Bag","","SportSupplies",28 };
+	SportSupplies.products[3] = { "Easton Game Ready Baseball Backpack","","SportSupplies", 55 };
+	SportSupplies.products[4] = { "Bounce Pro 7-Foot  Trampoline","","SportSupplies", 123 };
+	SportSupplies.products[5] = { "Nike Phantom VSN 2 Elite","","SportSupplies", 272 };
+	SportSupplies.products[6] = { "Nike Junior Mercurialx Proximo II","","SportSupplies",90 };
+	SportSupplies.products[7] = { "Muck Kid's Rugged II Boot ","","SportSupplies",54 };
+	SportSupplies.products[8] = { "Duo Tennis Racquet set","","SportSupplies",35 };
+	SportSupplies.products[9] = { "Huffy 20 Boy Kids Bike","","SportSupplies", 78 };
 
-	HomeFurniture.products[0] = { "Platform Bed Frame with 4 Storage Drawers","","",255 };
-	HomeFurniture.products[1] = { "Allewie Brown Queen Size Bed Frame","","",189 };
-	HomeFurniture.products[2] = { "Lily's Home Hanging Wall Clock","","", 30 };
-	HomeFurniture.products[3] = { "Zimtown 5 Tier Heavy Duty Steel Shelving","","", 50 };
-	HomeFurniture.products[4] = { "Hoover PowerDash Cleaner","","", 81 };
-	HomeFurniture.products[5] = { "Shower Curtain Christmas ","","",30 };
-	HomeFurniture.products[6] = { "Costway 1700W Portable Clothes Dryer","","",330 };
-	HomeFurniture.products[7] = { "BestMassage Heavy Duty Shelf ","","",43 };
-	HomeFurniture.products[8] = { "Sterilite Wide 4 Drawer","","",44.78 };
-	HomeFurniture.products[9] = { "Beautiful 6 Quart Touchscreen Air Fryer","","",69 };
+	HomeFurniture.products[0] = { "Platform Bed Frame with 4 Storage Drawers","","HomeFurniture",255 };
+	HomeFurniture.products[1] = { "Allewie Brown Queen Size Bed Frame","","HomeFurniture",189 };
+	HomeFurniture.products[2] = { "Lily's Home Hanging Wall Clock","","HomeFurniture", 30 };
+	HomeFurniture.products[3] = { "Zimtown 5 Tier Heavy Duty Steel Shelving","","HomeFurniture", 50 };
+	HomeFurniture.products[4] = { "Hoover PowerDash Cleaner","","HomeFurniture", 81 };
+	HomeFurniture.products[5] = { "Shower Curtain Christmas ","","HomeFurniture",30 };
+	HomeFurniture.products[6] = { "Costway 1700W Portable Clothes Dryer","","HomeFurniture",330 };
+	HomeFurniture.products[7] = { "BestMassage Heavy Duty Shelf ","","HomeFurniture",43 };
+	HomeFurniture.products[8] = { "Sterilite Wide 4 Drawer","","HomeFurniture",44.78 };
+	HomeFurniture.products[9] = { "Beautiful 6 Quart Touchscreen Air Fryer","","HomeFurniture",69 };
 
 	ProductionD(Electronics, "6/5/2022");
 	ProductionD(VideoGames, "12/2/2022");
@@ -740,7 +740,7 @@ bool view_products(int number) {
 			videogames_keys[videogames_counter] = key;
 			videogames_counter++;
 			make_order = true;
-			
+
 		}
 		else {
 			system("CLS");
@@ -859,329 +859,335 @@ bool view_products(int number) {
 			return false;
 		}
 		break;
-	}
-	/*
-	// msh hnkhleha do while 3shan kda bgbrh hta lw das no byzhrhlh categories tany 3shan code kolh bytnfz fy awl mra mn gher ma ycheck condition
-	do {
+	default:
+		cout << "Invalid Input" << endl;
+		cout << "To View Categories Press Enter" << endl;
+		system("pause");
+		view_categories();
+		break;
+		/*
+		// msh hnkhleha do while 3shan kda bgbrh hta lw das no byzhrhlh categories tany 3shan code kolh bytnfz fy awl mra mn gher ma ycheck condition
+		do {
+			cout << "Do You want to checkout? y/n: ";
+			cin >> buy_again;
+			view_categories();
+		} while (buy_again =='n' || buy_again == 'N');
+		*/
 		cout << "Do You want to checkout? y/n: ";
 		cin >> buy_again;
-		view_categories();
-	} while (buy_again =='n' || buy_again == 'N');
-	*/
-	cout << "Do You want to checkout? y/n: ";
-	cin >> buy_again;
-	if (buy_again == 'n' || buy_again == 'N') {
-		view_categories();
+		if (buy_again == 'n' || buy_again == 'N') {
+			view_categories();
+		}
+		else if (buy_again != 'y' || buy_again != 'Y') {
+			cout << "Invalid Input ";
+			view_categories();
+		}
 	}
 
 
 
-}
 
+	void searchByName(string name_product) {
+		bool product_found = false;
+		int product_no;
+		int index_no;
+		char buy;
+		char buy_again;
+		//cout << name_product << endl;
+		for (int i = 0; i < 70; i++) {
+			//cout << all_products[i] << endl;
+			if (name_product == all_products[i]) {
+				product_found = true;
+				product_no = i;
+				break;
+			}
+			else {
+				product_found = false;
+			}
+		}
+		//cout << product_found;
+		if (product_found) {
+			if (product_no >= 0 && product_no < 10) { //hoa bycheck elawl 3la kol wahda bltrteb lw lka wahda true bytl3 mn kolh
+				index_no = product_no;
+				//cout << "TEST";
+				product_information(Electronics, index_no);
 
+				cout << "Do you wanna buy it? y/n: ";
+				cin >> buy;
+				if (buy == 'y' || buy == 'Y') {
+					Cart(Electronics, index_no);
+					counter_products++;
+					make_order = true;
+					cout << "Do You want to checkout? y/n: ";
+					cin >> buy_again;
+					if (buy_again == 'n' || buy_again == 'N') {
+						view_categories();
 
+					}
+				}
+				else {
+					view_categories();
+				}
+			}
+			else if (product_no >= 10 && product_no < 20) {
+				index_no = product_no - 10;
+				//cout << "TEST";
+				product_information(VideoGames, index_no);
 
-void searchByName(string name_product) {
-	bool product_found = false;
-	int product_no;
-	int index_no;
-	char buy;
-	char buy_again;
-	//cout << name_product << endl;
-	for (int i = 0; i < 70; i++) {
-		//cout << all_products[i] << endl;
-		if (name_product == all_products[i]) {
-			product_found = true;
-			product_no = i;
-			break;
+				cout << "Do you wanna buy it? y/n: ";
+				cin >> buy;
+				if (buy == 'y' || buy == 'Y') {
+					Cart(VideoGames, index_no);
+					counter_products++;
+					make_order = true;
+					cout << "Do You want to checkout? y/n: ";
+					cin >> buy_again;
+					if (buy_again == 'n' || buy_again == 'N') {
+						view_categories();
+					}
+				}
+				else {
+					view_categories();
+				}
+			}
+			else if (product_no >= 20 && product_no < 30) {
+				index_no = product_no - 20;
+				//cout << "TEST";
+				product_information(Groceries, index_no);
+
+				cout << "Do you wanna buy it? y/n: ";
+				cin >> buy;
+				if (buy == 'y' || buy == 'Y') {
+					Cart(Groceries, index_no);
+					counter_products++;
+					make_order = true;
+					cout << "Do You want to checkout? y/n: ";
+					cin >> buy_again;
+					if (buy_again == 'n' || buy_again == 'N') {
+						view_categories();
+					}
+				}
+				else {
+					view_categories();
+				}
+			}
+			else if (product_no >= 30 && product_no < 40) {
+				index_no = product_no - 30;
+				product_information(Office, index_no);
+
+				cout << "Do you wanna buy it? y/n: ";
+				cin >> buy;
+				if (buy == 'y' || buy == 'Y') {
+					Cart(Office, index_no);
+					counter_products++;
+					make_order = true;
+					cout << "Do You want to checkout? y/n: ";
+					cin >> buy_again;
+					if (buy_again == 'n' || buy_again == 'N') {
+						view_categories();
+					}
+				}
+				else {
+					view_categories();
+				}
+			}
+			else if (product_no >= 40 && product_no < 50) {
+				index_no = product_no - 40;
+				product_information(Beauty, index_no);
+
+				cout << "Do you wanna buy it? y/n: ";
+				cin >> buy;
+				if (buy == 'y' || buy == 'Y') {
+					Cart(Beauty, index_no);
+					counter_products++;
+					make_order = true;
+					cout << "Do You want to checkout? y/n: ";
+					cin >> buy_again;
+					if (buy_again == 'n' || buy_again == 'N') {
+						view_categories();
+					}
+				}
+				else {
+					view_categories();
+				}
+			}
+			else if (product_no >= 50 && product_no < 60) {
+				index_no = product_no - 50;
+				product_information(SportSupplies, index_no);
+
+				cout << "Do you wanna buy it? y/n: ";
+				cin >> buy;
+				if (buy == 'y' || buy == 'Y') {
+					Cart(SportSupplies, index_no);
+					counter_products++;
+					make_order = true;
+					cout << "Do You want to checkout? y/n: ";
+					cin >> buy_again;
+					if (buy_again == 'n' || buy_again == 'N') {
+						view_categories();
+					}
+				}
+				else {
+					view_categories();
+				}
+			}
+			else if (product_no >= 60 && product_no < 70) {
+				index_no = product_no - 60;
+				product_information(HomeFurniture, index_no);
+
+				cout << "Do you wanna buy it? y/n: ";
+				cin >> buy;
+				if (buy == 'y' || buy == 'Y') {
+					Cart(HomeFurniture, index_no);
+					counter_products++;
+					make_order = true;
+					cout << "Do You want to checkout? y/n: ";
+					cin >> buy_again;
+					if (buy_again == 'n' || buy_again == 'N') {
+						view_categories();
+					}
+				}
+				else {
+					view_categories();
+				}
+			}
+			// lw yes b if cond khaly function trg3 index_no l total price fa mn khlalh n3rf ngeb kol elbyanat
+			// mmkn t3ml m3a kol switch case fok ,wdo3 char buy , w t3ml variable esmh category tkhtb feh esm category fy kol case
+			// w variable tstore feh esm product
 		}
 		else {
-			product_found = false;
+			cout << "Sorry we couldnt find this product...!";
+		}
+		//system("pause");
+	}
+
+	void product_information(Category nameOFcategory, int noOfProduct) {
+		system("CLS");
+		cout << "Name: " << nameOFcategory.products[noOfProduct].name << endl;
+		cout << "ID: " << nameOFcategory.products[noOfProduct].id << endl;
+		cout << "Category: " << nameOFcategory.products[noOfProduct].category << endl;
+		cout << "Production Date: " << nameOFcategory.products[noOfProduct].production_date << endl;
+		cout << "Expired Date:  " << nameOFcategory.products[noOfProduct].expiration_date << endl;
+		cout << "Price: " << nameOFcategory.products[noOfProduct].price << "$" << endl;
+
+	}
+
+
+	void Cart(Category category_name, int number) {
+		order_products.CustomerID = customer[user_index].id;
+		order_products.products_prices[counter_products] = category_name.products[number].price;
+		order_products.products_names[counter_products] = category_name.products[number].name;
+		order_products.products_categories[counter_products] = category_name.products[number].category;
+		order_products.products_codes[counter_products] = category_name.products[number].id;
+		//return order_products;
+		// order_products is the variable that has the data type of struct so you can use any member in it
+	}
+
+	void ProductionD(Category & nameofcategory, string date) {
+		for (int i = 0; i < 10; i++) {
+			nameofcategory.products[i].production_date = date;
 		}
 	}
-	//cout << product_found;
-	if (product_found) {
-		if (product_no >= 0 && product_no < 10) { //hoa bycheck elawl 3la kol wahda bltrteb lw lka wahda true bytl3 mn kolh
-			index_no = product_no;
-			//cout << "TEST";
-			product_information(Electronics, index_no);
 
-			cout << "Do you wanna buy it? y/n: ";
-			cin >> buy;
-			if (buy == 'y' || buy == 'Y') {
-				Cart(Electronics, index_no);
-				counter_products++;
-				make_order = true;
-				cout << "Do You want to checkout? y/n: ";
-				cin >> buy_again;
-				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
-
-				}
-			}
-			else {
-				view_categories();
-			}
+	void ExpirationD(Category & nameofcategory, string date) {
+		for (int i = 0; i < 10; i++) {
+			nameofcategory.products[i].expiration_date = date;
 		}
-		else if (product_no >= 10 && product_no < 20) {
-			index_no = product_no - 10;
-			//cout << "TEST";
-			product_information(VideoGames, index_no);
-
-			cout << "Do you wanna buy it? y/n: ";
-			cin >> buy;
-			if (buy == 'y' || buy == 'Y') {
-				Cart(VideoGames, index_no);
-				counter_products++;
-				make_order = true;
-				cout << "Do You want to checkout? y/n: ";
-				cin >> buy_again;
-				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
-				}
-			}
-			else {
-				view_categories();
-			}
-		}
-		else if (product_no >= 20 && product_no < 30) {
-			index_no = product_no - 20;
-			//cout << "TEST";
-			product_information(Groceries, index_no);
-
-			cout << "Do you wanna buy it? y/n: ";
-			cin >> buy;
-			if (buy == 'y' || buy == 'Y') {
-				Cart(Groceries, index_no);
-				counter_products++;
-				make_order = true;
-				cout << "Do You want to checkout? y/n: ";
-				cin >> buy_again;
-				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
-				}
-			}
-			else {
-				view_categories();
-			}
-		}
-		else if (product_no >= 30 && product_no < 40) {
-			index_no = product_no - 30;
-			product_information(Office, index_no);
-
-			cout << "Do you wanna buy it? y/n: ";
-			cin >> buy;
-			if (buy == 'y' || buy == 'Y') {
-				Cart(Office, index_no);
-				counter_products++;
-				make_order = true;
-				cout << "Do You want to checkout? y/n: ";
-				cin >> buy_again;
-				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
-				}
-			}
-			else {
-				view_categories();
-			}
-		}
-		else if (product_no >= 40 && product_no < 50) {
-			index_no = product_no - 40;
-			product_information(Beauty, index_no);
-
-			cout << "Do you wanna buy it? y/n: ";
-			cin >> buy;
-			if (buy == 'y' || buy == 'Y') {
-				Cart(Beauty, index_no);
-				counter_products++;
-				make_order = true;
-				cout << "Do You want to checkout? y/n: ";
-				cin >> buy_again;
-				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
-				}
-			}
-			else {
-				view_categories();
-			}
-		}
-		else if (product_no >= 50 && product_no < 60) {
-			index_no = product_no - 50;
-			product_information(SportSupplies, index_no);
-
-			cout << "Do you wanna buy it? y/n: ";
-			cin >> buy;
-			if (buy == 'y' || buy == 'Y') {
-				Cart(SportSupplies, index_no);
-				counter_products++;
-				make_order = true;
-				cout << "Do You want to checkout? y/n: ";
-				cin >> buy_again;
-				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
-				}
-			}
-			else {
-				view_categories();
-			}
-		}
-		else if (product_no >= 60 && product_no < 70) {
-			index_no = product_no - 60;
-			product_information(HomeFurniture, index_no);
-
-			cout << "Do you wanna buy it? y/n: ";
-			cin >> buy;
-			if (buy == 'y' || buy == 'Y') {
-				Cart(HomeFurniture, index_no);
-				counter_products++;
-				make_order = true;
-				cout << "Do You want to checkout? y/n: ";
-				cin >> buy_again;
-				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
-				}
-			}
-			else {
-				view_categories();
-			}
-		}
-		// lw yes b if cond khaly function trg3 index_no l total price fa mn khlalh n3rf ngeb kol elbyanat
-		// mmkn t3ml m3a kol switch case fok ,wdo3 char buy , w t3ml variable esmh category tkhtb feh esm category fy kol case
-		// w variable tstore feh esm product
 	}
-	else {
-		cout << "Sorry we couldnt find this product...!";
+
+	string Product_RandomID(int from, int to) {
+		int RandomNumber = rand() % (to - from + 1) + from;
+		return  "#" + to_string(RandomNumber);
 	}
-	//system("pause");
-}
 
-void product_information(Category nameOFcategory, int noOfProduct) {
-	system("CLS");
-	cout << "Name: " << nameOFcategory.products[noOfProduct].name << endl;
-	cout << "ID: " << nameOFcategory.products[noOfProduct].id << endl;
-	cout << "Category: " << nameOFcategory.products[noOfProduct].category << endl;
-	cout << "Production Date: " << nameOFcategory.products[noOfProduct].production_date << endl;
-	cout << "Expired Date:  " << nameOFcategory.products[noOfProduct].expiration_date << endl;
-	cout << "Price: " << nameOFcategory.products[noOfProduct].price << "$" << endl;
-
-}
-
-
-void Cart(Category category_name, int number) {
-	order_products.CustomerID = customer[user_index].id;
-	order_products.products_prices[counter_products] = category_name.products[number].price;
-	order_products.products_names[counter_products] = category_name.products[number].name;
-	order_products.products_categories[counter_products] = category_name.products[number].category;
-	order_products.products_codes[counter_products] = category_name.products[number].id;
-	//return order_products;
-	// order_products is the variable that has the data type of struct so you can use any member in it
-}
-
-void ProductionD(Category& nameofcategory, string date) {
-	for (int i = 0; i < 10; i++) {
-		nameofcategory.products[i].production_date = date;
-	}
-}
-
-void ExpirationD(Category& nameofcategory, string date) {
-	for (int i = 0; i < 10; i++) {
-		nameofcategory.products[i].expiration_date = date;
-	}
-}
-
-string Product_RandomID(int from, int to) {
-	int RandomNumber = rand() % (to - from + 1) + from;
-	return  "#" + to_string(RandomNumber);
-}
-
-double review_order() {
-	system("CLS");
-	cout << "-THE CART-" << endl;
-	int total_price = 0;
-	int counter_key = 0;
-	cout << "Customer ID: " << order_products.CustomerID << endl;
-	cout << "No of products you bought: " << counter_products << endl;
-	cout << "--------------------------------------------------------" << endl;
-	for (int i = 0; i < counter_products; i++) {
-		if (order_products.products_categories[i] == "VideoGames - PlayStation 4" || order_products.products_categories[i] == "VideoGames - PlayStation 5") {
-			// hn3ml loop gwa array of video gmes keys aw laa w ehna m3ana kam video game keys
-			// w msh 3arf mmkn bdl if n3ml loop bdalha wla laa
+	double review_order() {
+		system("CLS");
+		cout << "-THE CART-" << endl;
+		int total_price = 0;
+		int counter_key = 0;
+		cout << "Customer ID: " << order_products.CustomerID << endl;
+		cout << "No of products you bought: " << counter_products << endl;
+		cout << "--------------------------------------------------------" << endl;
+		for (int i = 0; i < counter_products; i++) {
+			if (order_products.products_categories[i] == "VideoGames - PlayStation 4" || order_products.products_categories[i] == "VideoGames - PlayStation 5") {
+				// hn3ml loop gwa array of video gmes keys aw laa w ehna m3ana kam video game keys
+				// w msh 3arf mmkn bdl if n3ml loop bdalha wla laa
+				cout << "Product " << i + 1 << endl;
+				cout << "Product Name: " << order_products.products_names[i] << endl;
+				cout << "Category of the product: " << order_products.products_categories[i] << endl;
+				cout << "Product Code: " << order_products.products_codes[i] << endl;
+				cout << "Serial Key to play online: " << videogames_keys[counter_key] << endl;
+				cout << "Product Price: " << order_products.products_prices[i] << "$" << endl;
+				cout << "--------------------------------------------------------" << endl;
+				counter_key++;
+				continue;
+			}
 			cout << "Product " << i + 1 << endl;
 			cout << "Product Name: " << order_products.products_names[i] << endl;
 			cout << "Category of the product: " << order_products.products_categories[i] << endl;
 			cout << "Product Code: " << order_products.products_codes[i] << endl;
-			cout << "Serial Key to play online: " << videogames_keys[counter_key] << endl;
 			cout << "Product Price: " << order_products.products_prices[i] << "$" << endl;
 			cout << "--------------------------------------------------------" << endl;
-			counter_key++;
-			continue;
 		}
-		cout << "Product " << i + 1 << endl;
-		cout << "Product Name: " << order_products.products_names[i] << endl;
-		cout << "Category of the product: " << order_products.products_categories[i] << endl;
-		cout << "Product Code: " << order_products.products_codes[i] << endl;
-		cout << "Product Price: " << order_products.products_prices[i] << "$" << endl;
-		cout << "--------------------------------------------------------" << endl;
-	}
-	for (int j = 0; j < counter_products; j++) {
-		total_price += order_products.products_prices[j];
-	}
-	char modify_order;
-	cout << "Do you wanna modify the order? y/n: ";
-	cin >> modify_order;
-	if (modify_order == 'y' || 'Y') {
-		// function of modify order
-		// calculate the total price and discount
-	}
-	else {
-		// calculate the total price and discount
-		price_after_discount(counter_products, total_price);
-	}
-	// menu of log out
-	return total_price;
-}
-
-double price_after_discount(int products_count, double total_price)
-{
-	if (products_count == 1) {
-		cout << "There is no discount\n";
-		cout << "Total price is : " << total_price << endl;
-	}
-	else if (products_count == 2) {
-		total_price = total_price - (total_price * 0.05);
-		cout << "There is 5% discount\n";
-		cout << "Total price is : " << total_price << endl;
-	}
-	else if (products_count == 3) {
-		total_price = total_price - (total_price * 0.1);
-		cout << "There is 10% discount\n";
-		cout << "Total price is : " << total_price << endl;
-	}
-	else if (products_count == 4) {
-		total_price = total_price - (total_price * 0.15);
-		cout << "There is 15% discount\n";
-		cout << "Total price is : " << total_price << endl;
-	}
-	else if (products_count >= 5) {
-		total_price = total_price - (total_price * 0.2);
-		cout << "There is 20% discount\n";
-		cout << "Total price is : " << total_price << endl;
-	}
-	return total_price;
-}
-
-char RandomCharchters(char from, char to) {
-	return rand() % (to - from + 1) + from;
-}
-string Generatekey() {
-	srand(time(NULL));
-	string Key = "";
-	for (int j = 1; j <= 16; j++) {
-		Key += RandomCharchters('A', 'Z');
-		if (j % 4 == 0 && j != 16) {
-			Key += '-';
+		for (int j = 0; j < counter_products; j++) {
+			total_price += order_products.products_prices[j];
 		}
+		char modify_order;
+		cout << "Do you wanna modify the order? y/n: ";
+		cin >> modify_order;
+		if (modify_order == 'y' || 'Y') {
+			// function of modify order
+			// calculate the total price and discount
+		}
+		else {
+			// calculate the total price and discount
+			price_after_discount(counter_products, total_price);
+		}
+		// menu of log out
+		return total_price;
 	}
-	return Key;
-}
+
+	double price_after_discount(int products_count, double total_price)
+	{
+		if (products_count == 1) {
+			cout << "There is no discount\n";
+			cout << "Total price is : " << total_price << endl;
+		}
+		else if (products_count == 2) {
+			total_price = total_price - (total_price * 0.05);
+			cout << "There is 5% discount\n";
+			cout << "Total price is : " << total_price << endl;
+		}
+		else if (products_count == 3) {
+			total_price = total_price - (total_price * 0.1);
+			cout << "There is 10% discount\n";
+			cout << "Total price is : " << total_price << endl;
+		}
+		else if (products_count == 4) {
+			total_price = total_price - (total_price * 0.15);
+			cout << "There is 15% discount\n";
+			cout << "Total price is : " << total_price << endl;
+		}
+		else if (products_count >= 5) {
+			total_price = total_price - (total_price * 0.2);
+			cout << "There is 20% discount\n";
+			cout << "Total price is : " << total_price << endl;
+		}
+		return total_price;
+	}
+
+	char RandomCharchters(char from, char to) {
+		return rand() % (to - from + 1) + from;
+	}
+	string Generatekey() {
+		srand(time(NULL));
+		string Key = "";
+		for (int j = 1; j <= 16; j++) {
+			Key += RandomCharchters('A', 'Z');
+			if (j % 4 == 0 && j != 16) {
+				Key += '-';
+			}
+		}
+		return Key;
+	}
 

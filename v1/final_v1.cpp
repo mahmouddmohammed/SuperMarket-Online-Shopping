@@ -922,6 +922,9 @@ void searchByName(string name_product) {
 	int index_no;
 	char buy;
 	char buy_again;
+	char modify_cart;
+	double total_price_beforemodify;
+	double total_price_aftermodify;
 	//cout << name_product << endl;
 	for (int i = 0; i < 70; i++) {
 		//cout << all_products[i] << endl;
@@ -953,6 +956,29 @@ void searchByName(string name_product) {
 					view_categories();
 
 				}
+				else if (buy_again == 'y' || buy_again == 'Y') {
+					if (counter_products == 1) { // that means that customer buys at least one product
+						total_price_beforemodify = review_order();
+						cout << "Do you wanna modify the order? y/n: ";
+						cin >> modify_cart;
+						if (modify_cart == 'y' || modify_cart == 'Y') {
+							// function of modify order
+							total_price_aftermodify = modify_order();
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_aftermodify);
+							system("pause");
+						}
+						else {
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_beforemodify);
+							system("pause");
+							//exit_program();
+
+						}
+						after_checkout();
+
+					}
+				}
 			}
 			else {
 				view_categories();
@@ -973,6 +999,29 @@ void searchByName(string name_product) {
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
 					view_categories();
+				}
+				else if (buy_again == 'y' || buy_again == 'Y') {
+					if (counter_products == 1) { // that means that customer buys at least one product
+						total_price_beforemodify = review_order();
+						cout << "Do you wanna modify the order? y/n: ";
+						cin >> modify_cart;
+						if (modify_cart == 'y' || modify_cart == 'Y') {
+							// function of modify order
+							total_price_aftermodify = modify_order();
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_aftermodify);
+							system("pause");
+						}
+						else {
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_beforemodify);
+							system("pause");
+							//exit_program();
+
+						}
+						after_checkout();
+
+					}
 				}
 			}
 			else {
@@ -995,6 +1044,29 @@ void searchByName(string name_product) {
 				if (buy_again == 'n' || buy_again == 'N') {
 					view_categories();
 				}
+				else if (buy_again == 'y' || buy_again == 'Y') {
+					if (counter_products == 1) { // that means that customer buys at least one product
+						total_price_beforemodify = review_order();
+						cout << "Do you wanna modify the order? y/n: ";
+						cin >> modify_cart;
+						if (modify_cart == 'y' || modify_cart == 'Y') {
+							// function of modify order
+							total_price_aftermodify = modify_order();
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_aftermodify);
+							system("pause");
+						}
+						else {
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_beforemodify);
+							system("pause");
+							//exit_program();
+
+						}
+						after_checkout();
+
+					}
+				}
 			}
 			else {
 				view_categories();
@@ -1014,6 +1086,29 @@ void searchByName(string name_product) {
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
 					view_categories();
+				}
+				else if (buy_again == 'y' || buy_again == 'Y') {
+					if (counter_products == 1) { // that means that customer buys at least one product
+						total_price_beforemodify = review_order();
+						cout << "Do you wanna modify the order? y/n: ";
+						cin >> modify_cart;
+						if (modify_cart == 'y' || modify_cart == 'Y') {
+							// function of modify order
+							total_price_aftermodify = modify_order();
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_aftermodify);
+							system("pause");
+						}
+						else {
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_beforemodify);
+							system("pause");
+							//exit_program();
+
+						}
+						after_checkout();
+
+					}
 				}
 			}
 			else {
@@ -1035,6 +1130,29 @@ void searchByName(string name_product) {
 				if (buy_again == 'n' || buy_again == 'N') {
 					view_categories();
 				}
+				else if (buy_again == 'y' || buy_again == 'Y') {
+					if (counter_products == 1) { // that means that customer buys at least one product
+						total_price_beforemodify = review_order();
+						cout << "Do you wanna modify the order? y/n: ";
+						cin >> modify_cart;
+						if (modify_cart == 'y' || modify_cart == 'Y') {
+							// function of modify order
+							total_price_aftermodify = modify_order();
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_aftermodify);
+							system("pause");
+						}
+						else {
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_beforemodify);
+							system("pause");
+							//exit_program();
+
+						}
+						after_checkout();
+
+					}
+				}
 			}
 			else {
 				view_categories();
@@ -1055,6 +1173,29 @@ void searchByName(string name_product) {
 				if (buy_again == 'n' || buy_again == 'N') {
 					view_categories();
 				}
+				else if (buy_again == 'y' || buy_again == 'Y') {
+					if (counter_products == 1) { // that means that customer buys at least one product
+						total_price_beforemodify = review_order();
+						cout << "Do you wanna modify the order? y/n: ";
+						cin >> modify_cart;
+						if (modify_cart == 'y' || modify_cart == 'Y') {
+							// function of modify order
+							total_price_aftermodify = modify_order();
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_aftermodify);
+							system("pause");
+						}
+						else {
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_beforemodify);
+							system("pause");
+							//exit_program();
+
+						}
+						after_checkout();
+
+					}
+				}
 			}
 			else {
 				view_categories();
@@ -1074,6 +1215,29 @@ void searchByName(string name_product) {
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
 					view_categories();
+				}
+				else if (buy_again == 'y' || buy_again == 'Y') {
+					if (counter_products == 1) { // that means that customer buys at least one product
+						total_price_beforemodify = review_order();
+						cout << "Do you wanna modify the order? y/n: ";
+						cin >> modify_cart;
+						if (modify_cart == 'y' || modify_cart == 'Y') {
+							// function of modify order
+							total_price_aftermodify = modify_order();
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_aftermodify);
+							system("pause");
+						}
+						else {
+							// calculate the total price and discount
+							price_after_discount(counter_products, total_price_beforemodify);
+							system("pause");
+							//exit_program();
+
+						}
+						after_checkout();
+
+					}
 				}
 			}
 			else {
@@ -1177,27 +1341,27 @@ double price_after_discount(int products_count, double total_price)
 {
 	if (products_count == 1) {
 		cout << "There is no discount\n";
-		cout << "Total price is : " << total_price << endl;
+		cout << "Total price is : " << total_price << "$" << endl;
 	}
 	else if (products_count == 2) {
 		total_price = total_price - (total_price * 0.05);
 		cout << "There is 5% discount\n";
-		cout << "Total price is : " << total_price << endl;
+		cout << "Total price is : " << total_price << "$" << endl;
 	}
 	else if (products_count == 3) {
 		total_price = total_price - (total_price * 0.1);
 		cout << "There is 10% discount\n";
-		cout << "Total price is : " << total_price << endl;
+		cout << "Total price is : " << total_price << "$" << endl;
 	}
 	else if (products_count == 4) {
 		total_price = total_price - (total_price * 0.15);
 		cout << "There is 15% discount\n";
-		cout << "Total price is : " << total_price << endl;
+		cout << "Total price is : " << total_price << "$" << endl;
 	}
 	else if (products_count >= 5) {
 		total_price = total_price - (total_price * 0.2);
 		cout << "There is 20% discount\n";
-		cout << "Total price is : " << total_price << endl;
+		cout << "Total price is : " << total_price << "$" << endl;
 	}
 	return total_price;
 }
@@ -1298,9 +1462,10 @@ void after_checkout() {
 		break;
 	case 2:
 		system("CLS");
-		reorder_information();
+		//reorder_information();
 		login_register_menu();
-		view_menu();
+		logout();
+		//view_menu();
 		break;
 	case 3:
 		exit_program();
@@ -1313,3 +1478,32 @@ void after_checkout() {
 	}
 
 }
+/*
+void orderoneproduct_searchname(){
+	double total_price_beforemodify;
+	double total_price_aftermodify;
+	char modify_cart;
+	if (counter_products == 1) { // that means that customer buys at least one product
+		total_price_beforemodify = review_order();
+		cout << "Do you wanna modify the order? y/n: ";
+		cin >> modify_cart;
+		if (modify_cart == 'y' || modify_cart == 'Y') {
+			// function of modify order
+			total_price_aftermodify = modify_order();
+			// calculate the total price and discount
+			price_after_discount(counter_products, total_price_aftermodify);
+			system("pause");
+		}
+		else {
+			// calculate the total price and discount
+			price_after_discount(counter_products, total_price_beforemodify);
+			system("pause");
+			//exit_program();
+
+		}
+		after_checkout();
+
+	}
+				
+}
+*/

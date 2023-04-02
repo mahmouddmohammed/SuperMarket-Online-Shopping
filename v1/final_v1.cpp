@@ -704,8 +704,8 @@ bool view_products(int number) {
 	bool make_order;
 	string key;
 	char modify_cart;
-	int total_price_beforemodify;
-	int total_price_aftermodify;
+	double total_price_beforemodify;
+	double total_price_aftermodify;
 	switch (number) {
 	case 1:
 		category_name = "Electronics";
@@ -908,10 +908,10 @@ bool view_products(int number) {
 			else {
 				// calculate the total price and discount
 				price_after_discount(counter_products, total_price_beforemodify);
-				exit_program();
+				//exit_program();
 
 			}
-			// menu of log out
+			
 		}
 	}
 	else {
@@ -1143,7 +1143,7 @@ string Product_RandomID(int from, int to) {
 
 double review_order() {
 	int i, j;
-	int total_price = 0;
+	double total_price = 0;
 	int counter_key = 0;
 	system("CLS");
 	cout << "-THE CART-" << endl;
@@ -1232,7 +1232,7 @@ string Generatekey() {
 
 double modify_order() {
 	int num, numX;
-	int total_price = 0;
+	double total_price = 0;
 	cout << "1.add Product" << endl;
 	cout << "2.remove product \n";
 	cout << "3.Cancel modify" << endl;
@@ -1275,9 +1275,27 @@ void exit_program() {
 }
 
 void after_checkout() {
+	int no;
 	system("CLS");
-	cout << "1. View main menu" << endl;
-	cout << "2. Back to categories" << endl;
-	cout << "3. Logout" << endl;
-	cout << "4. Exit" << endl;
+	cout << "1. Back to Home menu" << endl;
+	cout << "2. Logout" << endl;
+	cout << "3. Exit" << endl;
+	cout << "Enter No: ";
+	cin >> no;
+	switch (no) {
+	case 1:
+		view_menu();
+		break;
+	case 2:
+		login_register_menu();
+		break;
+	case 3:
+		exit_program();
+		break;
+	default:
+		cout << "Invalid Input..." << endl;
+		system("pause");
+		after_checkout();
+		break;
+	
 }

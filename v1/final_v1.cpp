@@ -888,6 +888,7 @@ bool view_products(int number) {
 				total_price_aftermodify = modify_order();
 				// calculate the total price and discount
 				price_after_discount(counter_products, total_price_aftermodify);
+				system("pause");
 			}
 			else {
 				// calculate the total price and discount
@@ -897,7 +898,7 @@ bool view_products(int number) {
 
 			}
 			after_checkout();
-			
+
 		}
 	}
 	else {
@@ -1253,6 +1254,15 @@ void backto_categories(int no) {
 }
 
 void logout() {
+	for (int i = 0; i < counter_products; i++) {
+		order_products.products_names[i] = "";
+		order_products.products_categories[i] = "";
+		order_products.products_codes[i] = "";
+		order_products.products_prices[i] = 0;
+	}
+	for (int j = 0; j < videogames_counter; j++) {
+		videogames_keys[j] = "";
+	}
 	view_menu();
 }
 void exit_program() {
@@ -1277,7 +1287,7 @@ void after_checkout() {
 	switch (no) {
 	case 1:
 		system("CLS");
-		view_menu();
+		logout();
 		break;
 	case 2:
 		system("CLS");
@@ -1292,5 +1302,5 @@ void after_checkout() {
 		after_checkout();
 		break;
 	}
-	
+
 }

@@ -1254,7 +1254,7 @@ void backto_categories(int no) {
 	}
 }
 
-
+// kda kda user id byt3mlh overwrite fy user information w order customer id
 void reorder_information() {
 	for (int i = 0; i < counter_products; i++) {
 		order_products.products_names[i] = "";
@@ -1298,6 +1298,7 @@ void after_checkout() {
 		break;
 	case 2:
 		system("CLS");
+		reorder_information();
 		login_register_menu();
 		view_menu();
 		break;

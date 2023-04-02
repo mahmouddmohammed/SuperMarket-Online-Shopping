@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 
@@ -71,10 +72,17 @@ double review_order();
 double price_after_discount(int products_count, double total_price);
 char RandomCharchters(char from, char to);
 string Generatekey();
+double modify_order();
+void backto_categories(int no);
+void logout();
+void exit_program();
+void after_checkout();
 
 int main() {
-	int total_price;
-	char logout;
+	int total_price_beforemodify;
+	int total_price_aftermodify;
+	char logoutt;
+	char modify_cart;
 	update_data();
 	do {
 		int x = login_register_menu();
@@ -83,17 +91,16 @@ int main() {
 		}
 		products_data();
 		view_menu();
-		/*
-		if (make_order) {
-			total_price = review_order(); //int 3shan tkon mn gher ksor
-		}
-		*/
-		if (counter_products > 0) { // that means that customer buys at least one product
-			total_price = review_order();
-		}
+
 		cout << "Do you wanna log out: " << endl;
-		cin >> logout;
-	} while (logout == 'Y' || logout == 'y');
+		cin >> logoutt;
+		//if (logoutt == 'Y' || logoutt == 'y')
+		//logout(); // continue en hoa ybd2 tany mn main
+		if (logoutt == 'N' || logoutt == 'n') {
+			view_categories();
+			break;
+		}
+	} while (true);
 
 	return 0;
 }
@@ -681,7 +688,6 @@ void view_categories() {
 	for (int i = 0; i < no_categories; i++) {
 		cout << i + 1 << ". " << categories[i] << endl;
 	}
-
 	int no;
 	cout << "Choose a number: ";
 	cin >> no;
@@ -697,14 +703,19 @@ bool view_products(int number) {
 	char buy_again;
 	bool make_order;
 	string key;
+	char modify_cart;
+	int total_price_beforemodify;
+	int total_price_aftermodify;
 	switch (number) {
 	case 1:
 		category_name = "Electronics";
 		for (int i = 0; i < no_products; i++) {
 			cout << i + 1 << ". " << Electronics.products[i].name << endl;
 		}
+		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
+		backto_categories(num);
 		product_information(Electronics, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
@@ -726,8 +737,10 @@ bool view_products(int number) {
 		for (int i = 0; i < no_products; i++) {
 			cout << i + 1 << ". " << VideoGames.products[i].name << endl;
 		}
+		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
+		backto_categories(num);
 		product_information(VideoGames, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
@@ -753,8 +766,10 @@ bool view_products(int number) {
 		for (int i = 0; i < no_products; i++) {
 			cout << i + 1 << ". " << Groceries.products[i].name << endl;
 		}
+		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
+		backto_categories(num);
 		product_information(Groceries, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
@@ -775,8 +790,10 @@ bool view_products(int number) {
 		for (int i = 0; i < no_products; i++) {
 			cout << i + 1 << ". " << Office.products[i].name << endl;
 		}
+		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
+		backto_categories(num);
 		product_information(Office, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
@@ -797,8 +814,10 @@ bool view_products(int number) {
 		for (int i = 0; i < no_products; i++) {
 			cout << i + 1 << ". " << Beauty.products[i].name << endl;
 		}
+		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
+		backto_categories(num);
 		product_information(Beauty, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
@@ -820,8 +839,10 @@ bool view_products(int number) {
 		for (int i = 0; i < no_products; i++) {
 			cout << i + 1 << ". " << SportSupplies.products[i].name << endl;
 		}
+		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
+		backto_categories(num);
 		product_information(SportSupplies, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
@@ -842,8 +863,10 @@ bool view_products(int number) {
 		for (int i = 0; i < no_products; i++) {
 			cout << i + 1 << ". " << HomeFurniture.products[i].name << endl;
 		}
+		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
+		backto_categories(num);
 		product_information(HomeFurniture, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
@@ -859,335 +882,402 @@ bool view_products(int number) {
 			return false;
 		}
 		break;
+
 	default:
 		cout << "Invalid Input" << endl;
-		cout << "To View Categories Press Enter" << endl;
 		system("pause");
 		view_categories();
-		break;
-		/*
-		// msh hnkhleha do while 3shan kda bgbrh hta lw das no byzhrhlh categories tany 3shan code kolh bytnfz fy awl mra mn gher ma ycheck condition
-		do {
-			cout << "Do You want to checkout? y/n: ";
-			cin >> buy_again;
-			view_categories();
-		} while (buy_again =='n' || buy_again == 'N');
-		*/
-		cout << "Do You want to checkout? y/n: ";
-		cin >> buy_again;
-		if (buy_again == 'n' || buy_again == 'N') {
-			view_categories();
-		}
-		else if (buy_again != 'y' || buy_again != 'Y') {
-			cout << "Invalid Input ";
-			view_categories();
-		}
 	}
 
-
-
-
-	void searchByName(string name_product) {
-		bool product_found = false;
-		int product_no;
-		int index_no;
-		char buy;
-		char buy_again;
-		//cout << name_product << endl;
-		for (int i = 0; i < 70; i++) {
-			//cout << all_products[i] << endl;
-			if (name_product == all_products[i]) {
-				product_found = true;
-				product_no = i;
-				break;
+	cout << "Do You want to checkout? y/n: ";
+	cin >> buy_again;
+	if (buy_again == 'n' || buy_again == 'N') {
+		view_categories();
+	}
+	else if (buy_again == 'y' || buy_again == 'Y') {
+		if (counter_products > 0) { // that means that customer buys at least one product
+			total_price_beforemodify = review_order();
+			cout << "Do you wanna modify the order? y/n: ";
+			cin >> modify_cart;
+			if (modify_cart == 'y' || modify_cart == 'Y') {
+				// function of modify order
+				total_price_aftermodify = modify_order();
+				// calculate the total price and discount
+				price_after_discount(counter_products, total_price_aftermodify);
 			}
 			else {
-				product_found = false;
+				// calculate the total price and discount
+				price_after_discount(counter_products, total_price_beforemodify);
+				exit_program();
+
 			}
+			// menu of log out
 		}
-		//cout << product_found;
-		if (product_found) {
-			if (product_no >= 0 && product_no < 10) { //hoa bycheck elawl 3la kol wahda bltrteb lw lka wahda true bytl3 mn kolh
-				index_no = product_no;
-				//cout << "TEST";
-				product_information(Electronics, index_no);
+	}
+	else {
+		cout << "Invalid Input ";
+		system("pause");
+		view_categories();
+	}
 
-				cout << "Do you wanna buy it? y/n: ";
-				cin >> buy;
-				if (buy == 'y' || buy == 'Y') {
-					Cart(Electronics, index_no);
-					counter_products++;
-					make_order = true;
-					cout << "Do You want to checkout? y/n: ";
-					cin >> buy_again;
-					if (buy_again == 'n' || buy_again == 'N') {
-						view_categories();
 
-					}
-				}
-				else {
-					view_categories();
-				}
-			}
-			else if (product_no >= 10 && product_no < 20) {
-				index_no = product_no - 10;
-				//cout << "TEST";
-				product_information(VideoGames, index_no);
 
-				cout << "Do you wanna buy it? y/n: ";
-				cin >> buy;
-				if (buy == 'y' || buy == 'Y') {
-					Cart(VideoGames, index_no);
-					counter_products++;
-					make_order = true;
-					cout << "Do You want to checkout? y/n: ";
-					cin >> buy_again;
-					if (buy_again == 'n' || buy_again == 'N') {
-						view_categories();
-					}
-				}
-				else {
-					view_categories();
-				}
-			}
-			else if (product_no >= 20 && product_no < 30) {
-				index_no = product_no - 20;
-				//cout << "TEST";
-				product_information(Groceries, index_no);
 
-				cout << "Do you wanna buy it? y/n: ";
-				cin >> buy;
-				if (buy == 'y' || buy == 'Y') {
-					Cart(Groceries, index_no);
-					counter_products++;
-					make_order = true;
-					cout << "Do You want to checkout? y/n: ";
-					cin >> buy_again;
-					if (buy_again == 'n' || buy_again == 'N') {
-						view_categories();
-					}
-				}
-				else {
-					view_categories();
-				}
-			}
-			else if (product_no >= 30 && product_no < 40) {
-				index_no = product_no - 30;
-				product_information(Office, index_no);
+}
 
-				cout << "Do you wanna buy it? y/n: ";
-				cin >> buy;
-				if (buy == 'y' || buy == 'Y') {
-					Cart(Office, index_no);
-					counter_products++;
-					make_order = true;
-					cout << "Do You want to checkout? y/n: ";
-					cin >> buy_again;
-					if (buy_again == 'n' || buy_again == 'N') {
-						view_categories();
-					}
-				}
-				else {
-					view_categories();
-				}
-			}
-			else if (product_no >= 40 && product_no < 50) {
-				index_no = product_no - 40;
-				product_information(Beauty, index_no);
 
-				cout << "Do you wanna buy it? y/n: ";
-				cin >> buy;
-				if (buy == 'y' || buy == 'Y') {
-					Cart(Beauty, index_no);
-					counter_products++;
-					make_order = true;
-					cout << "Do You want to checkout? y/n: ";
-					cin >> buy_again;
-					if (buy_again == 'n' || buy_again == 'N') {
-						view_categories();
-					}
-				}
-				else {
-					view_categories();
-				}
-			}
-			else if (product_no >= 50 && product_no < 60) {
-				index_no = product_no - 50;
-				product_information(SportSupplies, index_no);
 
-				cout << "Do you wanna buy it? y/n: ";
-				cin >> buy;
-				if (buy == 'y' || buy == 'Y') {
-					Cart(SportSupplies, index_no);
-					counter_products++;
-					make_order = true;
-					cout << "Do You want to checkout? y/n: ";
-					cin >> buy_again;
-					if (buy_again == 'n' || buy_again == 'N') {
-						view_categories();
-					}
-				}
-				else {
-					view_categories();
-				}
-			}
-			else if (product_no >= 60 && product_no < 70) {
-				index_no = product_no - 60;
-				product_information(HomeFurniture, index_no);
 
-				cout << "Do you wanna buy it? y/n: ";
-				cin >> buy;
-				if (buy == 'y' || buy == 'Y') {
-					Cart(HomeFurniture, index_no);
-					counter_products++;
-					make_order = true;
-					cout << "Do You want to checkout? y/n: ";
-					cin >> buy_again;
-					if (buy_again == 'n' || buy_again == 'N') {
-						view_categories();
-					}
-				}
-				else {
-					view_categories();
-				}
-			}
-			// lw yes b if cond khaly function trg3 index_no l total price fa mn khlalh n3rf ngeb kol elbyanat
-			// mmkn t3ml m3a kol switch case fok ,wdo3 char buy , w t3ml variable esmh category tkhtb feh esm category fy kol case
-			// w variable tstore feh esm product
+void searchByName(string name_product) {
+	bool product_found = false;
+	int product_no;
+	int index_no;
+	char buy;
+	char buy_again;
+	//cout << name_product << endl;
+	for (int i = 0; i < 70; i++) {
+		//cout << all_products[i] << endl;
+		if (name_product == all_products[i]) {
+			product_found = true;
+			product_no = i;
+			break;
 		}
 		else {
-			cout << "Sorry we couldnt find this product...!";
-		}
-		//system("pause");
-	}
-
-	void product_information(Category nameOFcategory, int noOfProduct) {
-		system("CLS");
-		cout << "Name: " << nameOFcategory.products[noOfProduct].name << endl;
-		cout << "ID: " << nameOFcategory.products[noOfProduct].id << endl;
-		cout << "Category: " << nameOFcategory.products[noOfProduct].category << endl;
-		cout << "Production Date: " << nameOFcategory.products[noOfProduct].production_date << endl;
-		cout << "Expired Date:  " << nameOFcategory.products[noOfProduct].expiration_date << endl;
-		cout << "Price: " << nameOFcategory.products[noOfProduct].price << "$" << endl;
-
-	}
-
-
-	void Cart(Category category_name, int number) {
-		order_products.CustomerID = customer[user_index].id;
-		order_products.products_prices[counter_products] = category_name.products[number].price;
-		order_products.products_names[counter_products] = category_name.products[number].name;
-		order_products.products_categories[counter_products] = category_name.products[number].category;
-		order_products.products_codes[counter_products] = category_name.products[number].id;
-		//return order_products;
-		// order_products is the variable that has the data type of struct so you can use any member in it
-	}
-
-	void ProductionD(Category & nameofcategory, string date) {
-		for (int i = 0; i < 10; i++) {
-			nameofcategory.products[i].production_date = date;
+			product_found = false;
 		}
 	}
+	//cout << product_found;
+	if (product_found) {
+		if (product_no >= 0 && product_no < 10) { //hoa bycheck elawl 3la kol wahda bltrteb lw lka wahda true bytl3 mn kolh
+			index_no = product_no;
+			//cout << "TEST";
+			product_information(Electronics, index_no);
 
-	void ExpirationD(Category & nameofcategory, string date) {
-		for (int i = 0; i < 10; i++) {
-			nameofcategory.products[i].expiration_date = date;
-		}
-	}
+			cout << "Do you wanna buy it? y/n: ";
+			cin >> buy;
+			if (buy == 'y' || buy == 'Y') {
+				Cart(Electronics, index_no);
+				counter_products++;
+				make_order = true;
+				cout << "Do You want to checkout? y/n: ";
+				cin >> buy_again;
+				if (buy_again == 'n' || buy_again == 'N') {
+					view_categories();
 
-	string Product_RandomID(int from, int to) {
-		int RandomNumber = rand() % (to - from + 1) + from;
-		return  "#" + to_string(RandomNumber);
-	}
-
-	double review_order() {
-		system("CLS");
-		cout << "-THE CART-" << endl;
-		int total_price = 0;
-		int counter_key = 0;
-		cout << "Customer ID: " << order_products.CustomerID << endl;
-		cout << "No of products you bought: " << counter_products << endl;
-		cout << "--------------------------------------------------------" << endl;
-		for (int i = 0; i < counter_products; i++) {
-			if (order_products.products_categories[i] == "VideoGames - PlayStation 4" || order_products.products_categories[i] == "VideoGames - PlayStation 5") {
-				// hn3ml loop gwa array of video gmes keys aw laa w ehna m3ana kam video game keys
-				// w msh 3arf mmkn bdl if n3ml loop bdalha wla laa
-				cout << "Product " << i + 1 << endl;
-				cout << "Product Name: " << order_products.products_names[i] << endl;
-				cout << "Category of the product: " << order_products.products_categories[i] << endl;
-				cout << "Product Code: " << order_products.products_codes[i] << endl;
-				cout << "Serial Key to play online: " << videogames_keys[counter_key] << endl;
-				cout << "Product Price: " << order_products.products_prices[i] << "$" << endl;
-				cout << "--------------------------------------------------------" << endl;
-				counter_key++;
-				continue;
+				}
 			}
-			cout << "Product " << i + 1 << endl;
+			else {
+				view_categories();
+			}
+		}
+		else if (product_no >= 10 && product_no < 20) {
+			index_no = product_no - 10;
+			//cout << "TEST";
+			product_information(VideoGames, index_no);
+
+			cout << "Do you wanna buy it? y/n: ";
+			cin >> buy;
+			if (buy == 'y' || buy == 'Y') {
+				Cart(VideoGames, index_no);
+				counter_products++;
+				make_order = true;
+				cout << "Do You want to checkout? y/n: ";
+				cin >> buy_again;
+				if (buy_again == 'n' || buy_again == 'N') {
+					view_categories();
+				}
+			}
+			else {
+				view_categories();
+			}
+		}
+		else if (product_no >= 20 && product_no < 30) {
+			index_no = product_no - 20;
+			//cout << "TEST";
+			product_information(Groceries, index_no);
+
+			cout << "Do you wanna buy it? y/n: ";
+			cin >> buy;
+			if (buy == 'y' || buy == 'Y') {
+				Cart(Groceries, index_no);
+				counter_products++;
+				make_order = true;
+				cout << "Do You want to checkout? y/n: ";
+				cin >> buy_again;
+				if (buy_again == 'n' || buy_again == 'N') {
+					view_categories();
+				}
+			}
+			else {
+				view_categories();
+			}
+		}
+		else if (product_no >= 30 && product_no < 40) {
+			index_no = product_no - 30;
+			product_information(Office, index_no);
+
+			cout << "Do you wanna buy it? y/n: ";
+			cin >> buy;
+			if (buy == 'y' || buy == 'Y') {
+				Cart(Office, index_no);
+				counter_products++;
+				make_order = true;
+				cout << "Do You want to checkout? y/n: ";
+				cin >> buy_again;
+				if (buy_again == 'n' || buy_again == 'N') {
+					view_categories();
+				}
+			}
+			else {
+				view_categories();
+			}
+		}
+		else if (product_no >= 40 && product_no < 50) {
+			index_no = product_no - 40;
+			product_information(Beauty, index_no);
+
+			cout << "Do you wanna buy it? y/n: ";
+			cin >> buy;
+			if (buy == 'y' || buy == 'Y') {
+				Cart(Beauty, index_no);
+				counter_products++;
+				make_order = true;
+				cout << "Do You want to checkout? y/n: ";
+				cin >> buy_again;
+				if (buy_again == 'n' || buy_again == 'N') {
+					view_categories();
+				}
+			}
+			else {
+				view_categories();
+			}
+		}
+		else if (product_no >= 50 && product_no < 60) {
+			index_no = product_no - 50;
+			product_information(SportSupplies, index_no);
+
+			cout << "Do you wanna buy it? y/n: ";
+			cin >> buy;
+			if (buy == 'y' || buy == 'Y') {
+				Cart(SportSupplies, index_no);
+				counter_products++;
+				make_order = true;
+				cout << "Do You want to checkout? y/n: ";
+				cin >> buy_again;
+				if (buy_again == 'n' || buy_again == 'N') {
+					view_categories();
+				}
+			}
+			else {
+				view_categories();
+			}
+		}
+		else if (product_no >= 60 && product_no < 70) {
+			index_no = product_no - 60;
+			product_information(HomeFurniture, index_no);
+
+			cout << "Do you wanna buy it? y/n: ";
+			cin >> buy;
+			if (buy == 'y' || buy == 'Y') {
+				Cart(HomeFurniture, index_no);
+				counter_products++;
+				make_order = true;
+				cout << "Do You want to checkout? y/n: ";
+				cin >> buy_again;
+				if (buy_again == 'n' || buy_again == 'N') {
+					view_categories();
+				}
+			}
+			else {
+				view_categories();
+			}
+		}
+		// lw yes b if cond khaly function trg3 index_no l total price fa mn khlalh n3rf ngeb kol elbyanat
+		// mmkn t3ml m3a kol switch case fok ,wdo3 char buy , w t3ml variable esmh category tkhtb feh esm category fy kol case
+		// w variable tstore feh esm product
+	}
+	else {
+		cout << "Sorry we couldnt find this product...!";
+	}
+	//system("pause");
+}
+
+void product_information(Category nameOFcategory, int noOfProduct) {
+	system("CLS");
+	cout << "Name: " << nameOFcategory.products[noOfProduct].name << endl;
+	cout << "ID: " << nameOFcategory.products[noOfProduct].id << endl;
+	cout << "Category: " << nameOFcategory.products[noOfProduct].category << endl;
+	cout << "Production Date: " << nameOFcategory.products[noOfProduct].production_date << endl;
+	cout << "Expired Date:  " << nameOFcategory.products[noOfProduct].expiration_date << endl;
+	cout << "Price: " << nameOFcategory.products[noOfProduct].price << "$" << endl;
+
+}
+
+
+void Cart(Category category_name, int number) {
+	order_products.CustomerID = customer[user_index].id;
+	order_products.products_prices[counter_products] = category_name.products[number].price;
+	order_products.products_names[counter_products] = category_name.products[number].name;
+	order_products.products_categories[counter_products] = category_name.products[number].category;
+	order_products.products_codes[counter_products] = category_name.products[number].id;
+	//return order_products;
+	// order_products is the variable that has the data type of struct so you can use any member in it
+}
+
+void ProductionD(Category& nameofcategory, string date) {
+	for (int i = 0; i < 10; i++) {
+		nameofcategory.products[i].production_date = date;
+	}
+}
+
+void ExpirationD(Category& nameofcategory, string date) {
+	for (int i = 0; i < 10; i++) {
+		nameofcategory.products[i].expiration_date = date;
+	}
+}
+
+string Product_RandomID(int from, int to) {
+	int RandomNumber = rand() % (to - from + 1) + from;
+	return  "#" + to_string(RandomNumber);
+}
+
+double review_order() {
+	int i, j;
+	int total_price = 0;
+	int counter_key = 0;
+	system("CLS");
+	cout << "-THE CART-" << endl;
+	cout << "Customer ID: " << order_products.CustomerID << endl;
+	cout << "No of products you bought: " << counter_products << endl;
+	cout << "--------------------------------------------------------" << endl;
+
+	for (i = 0, j = 0; i < counter_products; i++, j++) {
+		if (order_products.products_names[i] == "") {
+			if (i != 0) {
+				j = i - 1;
+			}
+
+			continue;
+		}
+		if (order_products.products_categories[i] == "VideoGames - PlayStation 4" || order_products.products_categories[i] == "VideoGames - PlayStation 5") {
+			cout << "Product " << j + 1 << endl;
 			cout << "Product Name: " << order_products.products_names[i] << endl;
 			cout << "Category of the product: " << order_products.products_categories[i] << endl;
 			cout << "Product Code: " << order_products.products_codes[i] << endl;
+			cout << "Serial Key to play online: " << videogames_keys[counter_key] << endl;
 			cout << "Product Price: " << order_products.products_prices[i] << "$" << endl;
 			cout << "--------------------------------------------------------" << endl;
+			counter_key++;
+			//j++;
+			continue;
 		}
-		for (int j = 0; j < counter_products; j++) {
-			total_price += order_products.products_prices[j];
+		cout << "Product " << j + 1 << endl;
+		cout << "Product Name: " << order_products.products_names[i] << endl;
+		cout << "Category of the product: " << order_products.products_categories[i] << endl;
+		cout << "Product Code: " << order_products.products_codes[i] << endl;
+		cout << "Product Price: " << order_products.products_prices[i] << "$" << endl;
+		cout << "--------------------------------------------------------" << endl;
+		//j++;
+	}
+	for (int q = 0; q < counter_products; q++) {
+		total_price += order_products.products_prices[q];
+	}
+
+	return total_price;
+}
+
+double price_after_discount(int products_count, double total_price)
+{
+	if (products_count == 1) {
+		cout << "There is no discount\n";
+		cout << "Total price is : " << total_price << endl;
+	}
+	else if (products_count == 2) {
+		total_price = total_price - (total_price * 0.05);
+		cout << "There is 5% discount\n";
+		cout << "Total price is : " << total_price << endl;
+	}
+	else if (products_count == 3) {
+		total_price = total_price - (total_price * 0.1);
+		cout << "There is 10% discount\n";
+		cout << "Total price is : " << total_price << endl;
+	}
+	else if (products_count == 4) {
+		total_price = total_price - (total_price * 0.15);
+		cout << "There is 15% discount\n";
+		cout << "Total price is : " << total_price << endl;
+	}
+	else if (products_count >= 5) {
+		total_price = total_price - (total_price * 0.2);
+		cout << "There is 20% discount\n";
+		cout << "Total price is : " << total_price << endl;
+	}
+	return total_price;
+}
+
+char RandomCharchters(char from, char to) {
+	return rand() % (to - from + 1) + from;
+}
+string Generatekey() {
+	srand(time(NULL));
+	string Key = "";
+	for (int j = 1; j <= 16; j++) {
+		Key += RandomCharchters('A', 'Z');
+		if (j % 4 == 0 && j != 16) {
+			Key += '-';
 		}
-		char modify_order;
-		cout << "Do you wanna modify the order? y/n: ";
-		cin >> modify_order;
-		if (modify_order == 'y' || 'Y') {
-			// function of modify order
-			// calculate the total price and discount
-		}
-		else {
-			// calculate the total price and discount
-			price_after_discount(counter_products, total_price);
-		}
-		// menu of log out
+	}
+	return Key;
+}
+
+double modify_order() {
+	int num, numX;
+	int total_price = 0;
+	cout << "1.add Product" << endl;
+	cout << "2.remove product \n";
+	cout << "3.Cancel modify" << endl;
+	cout << "Enter your choice: ";
+	cin >> num;
+
+	switch (num) {
+
+	case 1:
+		view_categories();
+		break;
+
+	case 2:
+		cout << "Enter the number of product you want to remove :";
+		cin >> numX;
+		order_products.products_names[numX - 1] = "";
+		order_products.products_categories[numX - 1] = "";
+		order_products.products_codes[numX - 1] = "";
+		order_products.products_prices[numX - 1] = 0;
+		total_price = review_order();
 		return total_price;
+		break;
+	case 3:
+		review_order();
+		break;
 	}
+}
 
-	double price_after_discount(int products_count, double total_price)
-	{
-		if (products_count == 1) {
-			cout << "There is no discount\n";
-			cout << "Total price is : " << total_price << endl;
-		}
-		else if (products_count == 2) {
-			total_price = total_price - (total_price * 0.05);
-			cout << "There is 5% discount\n";
-			cout << "Total price is : " << total_price << endl;
-		}
-		else if (products_count == 3) {
-			total_price = total_price - (total_price * 0.1);
-			cout << "There is 10% discount\n";
-			cout << "Total price is : " << total_price << endl;
-		}
-		else if (products_count == 4) {
-			total_price = total_price - (total_price * 0.15);
-			cout << "There is 15% discount\n";
-			cout << "Total price is : " << total_price << endl;
-		}
-		else if (products_count >= 5) {
-			total_price = total_price - (total_price * 0.2);
-			cout << "There is 20% discount\n";
-			cout << "Total price is : " << total_price << endl;
-		}
-		return total_price;
+void backto_categories(int no) {
+	if (no == 0) {
+		view_categories();
 	}
+}
 
-	char RandomCharchters(char from, char to) {
-		return rand() % (to - from + 1) + from;
-	}
-	string Generatekey() {
-		srand(time(NULL));
-		string Key = "";
-		for (int j = 1; j <= 16; j++) {
-			Key += RandomCharchters('A', 'Z');
-			if (j % 4 == 0 && j != 16) {
-				Key += '-';
-			}
-		}
-		return Key;
-	}
+void logout() {
+	view_menu();
+}
+void exit_program() {
+	exit(0);
+}
 
+void after_checkout() {
+	system("CLS");
+	cout << "1. View main menu" << endl;
+	cout << "2. Back to categories" << endl;
+	cout << "3. Logout" << endl;
+	cout << "4. Exit" << endl;
+}

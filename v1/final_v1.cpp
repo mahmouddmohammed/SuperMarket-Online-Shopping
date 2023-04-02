@@ -77,6 +77,7 @@ void backto_categories(int no);
 void logout();
 void exit_program();
 void after_checkout();
+void reorder_information();
 
 int main() {
 	update_data();
@@ -1298,6 +1299,7 @@ void after_checkout() {
 	case 2:
 		system("CLS");
 		login_register_menu();
+		view_menu();
 		break;
 	case 3:
 		exit_program();

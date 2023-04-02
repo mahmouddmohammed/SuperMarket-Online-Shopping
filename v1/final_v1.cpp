@@ -79,32 +79,16 @@ void exit_program();
 void after_checkout();
 
 int main() {
-	int total_price_beforemodify;
-	int total_price_aftermodify;
-	char logoutt;
-	char modify_cart;
 	update_data();
-	do {
-		int x = login_register_menu();
-		if (x == 1) {
-			return 1;
-		}
-		products_data();
-		view_menu();
-
-		cout << "Do you wanna log out: " << endl;
-		cin >> logoutt;
-		//if (logoutt == 'Y' || logoutt == 'y')
-		//logout(); // continue en hoa ybd2 tany mn main
-		if (logoutt == 'N' || logoutt == 'n') {
-			view_categories();
-			break;
-		}
-	} while (true);
-
+	int x = login_register_menu();
+	if (x == 1) {
+		return 1;
+	}
+	products_data();
+	view_menu();
 	return 0;
 }
-
+// HERE
 int login_register_menu() {
 	int no;
 	cout << "*****************************************************" << endl;
@@ -908,9 +892,11 @@ bool view_products(int number) {
 			else {
 				// calculate the total price and discount
 				price_after_discount(counter_products, total_price_beforemodify);
+				system("pause");
 				//exit_program();
 
 			}
+			after_checkout();
 			
 		}
 	}
@@ -1110,7 +1096,6 @@ void product_information(Category nameOFcategory, int noOfProduct) {
 	cout << "Production Date: " << nameOFcategory.products[noOfProduct].production_date << endl;
 	cout << "Expired Date:  " << nameOFcategory.products[noOfProduct].expiration_date << endl;
 	cout << "Price: " << nameOFcategory.products[noOfProduct].price << "$" << endl;
-
 }
 
 
@@ -1232,7 +1217,7 @@ string Generatekey() {
 
 double modify_order() {
 	int num, numX;
-	double total_price = 0;
+	double total_price;
 	cout << "1.add Product" << endl;
 	cout << "2.remove product \n";
 	cout << "3.Cancel modify" << endl;
@@ -1277,16 +1262,25 @@ void exit_program() {
 void after_checkout() {
 	int no;
 	system("CLS");
-	cout << "1. Back to Home menu" << endl;
+	cout << " \t SuperMarket Online Shopping" << endl;
+	cout << "*****************************************************" << endl;
+	cout << "\n";
+	cout << " \t Welcome to After Checkout Menu" << endl;
+	cout << " \t No of actual users: " << no_actualusers << endl;
+	cout << "\n";
+	cout << "****************Please write carefully****************" << endl;
+	cout << "1. Back to Home menu (View Categories & Search by name) " << endl;
 	cout << "2. Logout" << endl;
 	cout << "3. Exit" << endl;
 	cout << "Enter No: ";
 	cin >> no;
 	switch (no) {
 	case 1:
+		system("CLS");
 		view_menu();
 		break;
 	case 2:
+		system("CLS");
 		login_register_menu();
 		break;
 	case 3:
@@ -1297,5 +1291,6 @@ void after_checkout() {
 		system("pause");
 		after_checkout();
 		break;
+	}
 	
 }

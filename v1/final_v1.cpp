@@ -1253,7 +1253,8 @@ void backto_categories(int no) {
 	}
 }
 
-void logout() {
+
+void reorder_information() {
 	for (int i = 0; i < counter_products; i++) {
 		order_products.products_names[i] = "";
 		order_products.products_categories[i] = "";
@@ -1263,6 +1264,11 @@ void logout() {
 	for (int j = 0; j < videogames_counter; j++) {
 		videogames_keys[j] = "";
 	}
+	counter_products = 0;
+	videogames_counter = 0;
+}
+void logout() {
+	reorder_information();
 	view_menu();
 }
 void exit_program() {

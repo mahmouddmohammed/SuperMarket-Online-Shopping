@@ -657,6 +657,7 @@ void view_menu() {
 		break;
 	case 2:
 		cout << "Enter the name of product if you want to search by name: ";
+		//cin.ignore();
 		getline(cin, product_name);
 		searchByName(product_name);
 		system("pause");
@@ -925,6 +926,7 @@ void searchByName(string name_product) {
 	char modify_cart;
 	double total_price_beforemodify;
 	double total_price_aftermodify;
+	string key;
 	//cout << name_product << endl;
 	for (int i = 0; i < 70; i++) {
 		//cout << all_products[i] << endl;
@@ -953,11 +955,11 @@ void searchByName(string name_product) {
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
+					view_menu();
 
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
-					if (counter_products == 1) { // that means that customer buys at least one product
+					if (counter_products != 0) { // that means that customer buys at least one product
 						total_price_beforemodify = review_order();
 						cout << "Do you wanna modify the order? y/n: ";
 						cin >> modify_cart;
@@ -980,8 +982,13 @@ void searchByName(string name_product) {
 					}
 				}
 			}
+			else if (buy == 'n' || buy == 'N') {
+				view_menu();
+			}
 			else {
-				view_categories();
+				cout << "Wrong Input..." << endl;
+				system("pause");
+				view_menu();
 			}
 		}
 		else if (product_no >= 10 && product_no < 20) {
@@ -994,14 +1001,18 @@ void searchByName(string name_product) {
 			if (buy == 'y' || buy == 'Y') {
 				Cart(VideoGames, index_no);
 				counter_products++;
+				key = Generatekey();
+				cout << "Serial key to play online: " << key << endl;
+				videogames_keys[videogames_counter] = key;
+				videogames_counter++;
 				make_order = true;
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
+					view_menu();
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
-					if (counter_products == 1) { // that means that customer buys at least one product
+					if (counter_products != 0) { // that means that customer buys at least one product
 						total_price_beforemodify = review_order();
 						cout << "Do you wanna modify the order? y/n: ";
 						cin >> modify_cart;
@@ -1024,8 +1035,13 @@ void searchByName(string name_product) {
 					}
 				}
 			}
+			else if (buy == 'n' || buy == 'N') {
+				view_menu();
+			}
 			else {
-				view_categories();
+				cout << "Wrong Input..." << endl;
+				system("pause");
+				view_menu();
 			}
 		}
 		else if (product_no >= 20 && product_no < 30) {
@@ -1042,10 +1058,10 @@ void searchByName(string name_product) {
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
+					view_menu();
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
-					if (counter_products == 1) { // that means that customer buys at least one product
+					if (counter_products != 0) { // that means that customer buys at least one product
 						total_price_beforemodify = review_order();
 						cout << "Do you wanna modify the order? y/n: ";
 						cin >> modify_cart;
@@ -1068,8 +1084,13 @@ void searchByName(string name_product) {
 					}
 				}
 			}
+			else if (buy == 'n' || buy == 'N') {
+				view_menu();
+			}
 			else {
-				view_categories();
+				cout << "Wrong Input..." << endl;
+				system("pause");
+				view_menu();
 			}
 		}
 		else if (product_no >= 30 && product_no < 40) {
@@ -1085,10 +1106,10 @@ void searchByName(string name_product) {
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
+					view_menu();
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
-					if (counter_products == 1) { // that means that customer buys at least one product
+					if (counter_products != 0) { // that means that customer buys at least one product
 						total_price_beforemodify = review_order();
 						cout << "Do you wanna modify the order? y/n: ";
 						cin >> modify_cart;
@@ -1111,8 +1132,13 @@ void searchByName(string name_product) {
 					}
 				}
 			}
+			else if (buy == 'n' || buy == 'N') {
+				view_menu();
+			}
 			else {
-				view_categories();
+				cout << "Wrong Input..." << endl;
+				system("pause");
+				view_menu();
 			}
 		}
 		else if (product_no >= 40 && product_no < 50) {
@@ -1128,10 +1154,10 @@ void searchByName(string name_product) {
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
+					view_menu();
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
-					if (counter_products == 1) { // that means that customer buys at least one product
+					if (counter_products != 0) { // that means that customer buys at least one product
 						total_price_beforemodify = review_order();
 						cout << "Do you wanna modify the order? y/n: ";
 						cin >> modify_cart;
@@ -1154,8 +1180,13 @@ void searchByName(string name_product) {
 					}
 				}
 			}
+			else if (buy == 'n' || buy == 'N') {
+				view_menu();
+			}
 			else {
-				view_categories();
+				cout << "Wrong Input..." << endl;
+				system("pause");
+				view_menu();
 			}
 		}
 		else if (product_no >= 50 && product_no < 60) {
@@ -1171,10 +1202,10 @@ void searchByName(string name_product) {
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
+					view_menu();
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
-					if (counter_products == 1) { // that means that customer buys at least one product
+					if (counter_products != 0) { // that means that customer buys at least one product
 						total_price_beforemodify = review_order();
 						cout << "Do you wanna modify the order? y/n: ";
 						cin >> modify_cart;
@@ -1197,8 +1228,13 @@ void searchByName(string name_product) {
 					}
 				}
 			}
+			else if (buy == 'n' || buy == 'N') {
+				view_menu();
+			}
 			else {
-				view_categories();
+				cout << "Wrong Input..." << endl;
+				system("pause");
+				view_menu();
 			}
 		}
 		else if (product_no >= 60 && product_no < 70) {
@@ -1214,10 +1250,10 @@ void searchByName(string name_product) {
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_categories();
+					view_menu();
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
-					if (counter_products == 1) { // that means that customer buys at least one product
+					if (counter_products != 0) { // that means that customer buys at least one product
 						total_price_beforemodify = review_order();
 						cout << "Do you wanna modify the order? y/n: ";
 						cin >> modify_cart;
@@ -1240,8 +1276,13 @@ void searchByName(string name_product) {
 					}
 				}
 			}
+			else if (buy == 'n' || buy == 'N') {
+				view_menu();
+			}
 			else {
-				view_categories();
+				cout << "Wrong Input..." << endl;
+				system("pause");
+				view_menu();
 			}
 		}
 		// lw yes b if cond khaly function trg3 index_no l total price fa mn khlalh n3rf ngeb kol elbyanat
@@ -1249,7 +1290,10 @@ void searchByName(string name_product) {
 		// w variable tstore feh esm product
 	}
 	else {
-		cout << "Sorry we couldnt find this product...!";
+		cout << "Sorry we couldnt find this product...!" << endl;
+		system("pause");
+		view_menu();
+
 	}
 	//system("pause");
 }
@@ -1483,7 +1527,7 @@ void orderoneproduct_searchname(){
 	double total_price_beforemodify;
 	double total_price_aftermodify;
 	char modify_cart;
-	if (counter_products == 1) { // that means that customer buys at least one product
+	if (counter_products != 0) { // that means that customer buys at least one product
 		total_price_beforemodify = review_order();
 		cout << "Do you wanna modify the order? y/n: ";
 		cin >> modify_cart;
@@ -1504,6 +1548,6 @@ void orderoneproduct_searchname(){
 		after_checkout();
 
 	}
-				
+
 }
 */

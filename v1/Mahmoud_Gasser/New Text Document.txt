@@ -37,7 +37,7 @@ struct product {
 struct Category {
 	product products[10];
 };
- // to be global
+// to be global
 
 struct order {
 	int CustomerID;
@@ -54,38 +54,39 @@ int login_register_menu(users_information cust[100], int no_actualusers);
 void login_(users_information cust[100], int no_actualusers);
 void register_(users_information cust[100], int no_actualusers);
 bool update_information(int index_no, users_information cust[100], int no_actualusers);
-void view_menu(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture);
-void searchByName(string name_product, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture);
-void view_categories(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture);
-bool view_products(int, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture);
-void products_data(Category &Electronics, Category &VideoGames, Category &Groceries, Category &Office, Category &Beauty, Category &SportSupplies, Category &HomeFurniture);
+void view_menu(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
+void searchByName(string name_product, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
+void view_categories(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
+bool view_products(int, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
+void products_data(Category& Electronics, Category& VideoGames, Category& Groceries, Category& Office, Category& Beauty, Category& SportSupplies, Category& HomeFurniture);
 void ProductionD(Category& nameofcategory, string date);
 void ExpirationD(Category& nameofcategory, string date);
 string Product_RandomID(int from, int to);
 void product_information(Category nameOFcategory, int noOfProduct);
-void Cart(Category cat, int number);
+void Cart(Category cat, int number, users_information cust[100]);
 double review_order();
 double price_after_discount(int products_count, double total_price);
 char RandomCharchters(char from, char to);
 string Generatekey();
-double modify_order(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture);
-void backto_categories(int no, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture);
-void logout(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture);
+double modify_order(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
+void backto_categories(int no, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
+void logout(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
 void exit_program();
-void after_checkout();
+void after_checkout(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers);
 void reorder_information();
 
 int main() {
+
 	Category Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture;
 	users_information customer[100];
 	int no_actualusers = 2; //one- Based
-	update_data(customer,no_actualusers);
-	int x = login_register_menu(customer,no_actualusers);
+	update_data(customer, no_actualusers);
+	int x = login_register_menu(customer, no_actualusers);
 	if (x == 1) {
 		return 1;
 	}
 	products_data(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
-	view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+	view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, customer, no_actualusers);
 	return 0;
 }
 // HERE
@@ -104,7 +105,7 @@ int login_register_menu(users_information cust[100], int no_actualusers) {
 	switch (no)
 	{
 	case 1:
-		register_(cust,no_actualusers);
+		register_(cust, no_actualusers);
 		break;
 	case 2:
 		login_(cust, no_actualusers);
@@ -120,7 +121,7 @@ int login_register_menu(users_information cust[100], int no_actualusers) {
 	return 0;
 }
 
-void update_data(users_information cust[100],int &no_actualusers) {
+void update_data(users_information cust[100], int& no_actualusers) {
 
 	cust[0].name = "user1";
 	cust[0].email = "user1@gmail.com";
@@ -229,7 +230,7 @@ void register_(users_information cust[100], int no_actualusers) {
 		cout << "Wrong email" << endl;
 		cout << "Sorry try again..." << endl;
 		system("pause");
-		register_ (cust,no_actualusers);
+		register_(cust, no_actualusers);
 	}
 
 
@@ -244,7 +245,7 @@ void register_(users_information cust[100], int no_actualusers) {
 		cout << "Wrong phone number" << endl;
 		cout << "Sorry try again..." << endl;
 		system("pause");
-		register_(cust,no_actualusers);
+		register_(cust, no_actualusers);
 	}
 
 	cout << "Type your location: ";
@@ -477,7 +478,7 @@ bool update_information(int index_no, users_information cust[100], int no_actual
 			cout << "Wrong email" << endl;
 			cout << "Sorry try again..." << endl;
 			system("pause");
-			update_information(user_index,cust, no_actualusers);
+			update_information(user_index, cust, no_actualusers);
 		}
 		cout << "You successfully changed your email" << endl;
 		update_data.open("emails.txt", ios::out); // that's output will make overwrite 
@@ -635,7 +636,7 @@ void products_data(Category& Electronics, Category& VideoGames, Category& Grocer
 	}
 }
 
-void view_menu(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture) {
+void view_menu(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers) {
 	system("CLS");
 	int no;
 	string product_name;
@@ -651,23 +652,23 @@ void view_menu(Category Electronics, Category VideoGames, Category Groceries, Ca
 	switch (no)
 	{
 	case 1:
-		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		break;
 	case 2:
 		cout << "Enter the name of product if you want to search by name: ";
 		//cin.ignore();
 		getline(cin, product_name);
-		searchByName(product_name, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		searchByName(product_name, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture,cust,  no_actualusers);
 		system("pause");
 		break;
 	default:
 		cout << "Invalid Input" << endl;
-		view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		break;
 	}
 }
 
-void view_categories(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture) {
+void view_categories(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers) {
 	system("CLS");
 	for (int i = 0; i < no_categories; i++) {
 		cout << i + 1 << ". " << categories[i] << endl;
@@ -675,12 +676,12 @@ void view_categories(Category Electronics, Category VideoGames, Category Groceri
 	int no;
 	cout << "Choose a number: ";
 	cin >> no;
-	view_products(no, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+	view_products(no, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 }
 
 // hna b2a lazm nstkhdm enum 3shan nrbot elrkm mn fok b esm cateogary 3shan n3rfh mn w nstkhd,h fy struct aw mmkn ydwy 3ady 
-bool view_products(int number, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture) {
+bool view_products(int number, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers) {
 	system("CLS");
 	int num;
 	char do_buy;
@@ -699,20 +700,20 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
-		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		product_information(Electronics, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
 		cin >> do_buy;
 		if (do_buy == 'y' || do_buy == 'Y') {
-			Cart(Electronics, num - 1);
+			Cart(Electronics, num - 1,cust);
 			counter_products++;
 			make_order = true;
 
 		}
 		else {
 			system("CLS");
-			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			return false;
 		}
 		break;
@@ -724,13 +725,13 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
-		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		product_information(VideoGames, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
 		cin >> do_buy;
 		if (do_buy == 'y' || do_buy == 'Y') {
-			Cart(VideoGames, num - 1);
+			Cart(VideoGames, num - 1,cust);
 			counter_products++;
 			key = Generatekey();
 			cout << "Serial key to play online: " << key << endl;
@@ -741,7 +742,7 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		}
 		else {
 			system("CLS");
-			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			return false;
 		}
 		break;
@@ -753,19 +754,19 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
-		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		product_information(Groceries, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
 		cin >> do_buy;
 		if (do_buy == 'y' || do_buy == 'Y') {
-			Cart(Groceries, num - 1);
+			Cart(Groceries, num - 1,cust);
 			counter_products++;
 			make_order = true;
 		}
 		else {
 			system("CLS");
-			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			return false;
 		}
 		break;
@@ -777,19 +778,19 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
-		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		product_information(Office, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
 		cin >> do_buy;
 		if (do_buy == 'y' || do_buy == 'Y') {
-			Cart(Office, num - 1);
+			Cart(Office, num - 1,cust);
 			counter_products++;
 			make_order = true;
 		}
 		else {
 			system("CLS");
-			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			return false;
 		}
 		break;
@@ -801,20 +802,20 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
-		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		product_information(Beauty, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
 		cin >> do_buy;
 		if (do_buy == 'y' || do_buy == 'Y') {
-			Cart(Beauty, num - 1);
+			Cart(Beauty, num - 1,cust);
 			counter_products++;
 			make_order = true;
 
 		}
 		else {
 			system("CLS");
-			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			return false;
 		}
 		break;
@@ -826,19 +827,19 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
-		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		product_information(SportSupplies, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
 		cin >> do_buy;
 		if (do_buy == 'y' || do_buy == 'Y') {
-			Cart(SportSupplies, num - 1);
+			Cart(SportSupplies, num - 1,cust);
 			counter_products++;
 			make_order = true;
 		}
 		else {
 			system("CLS");
-			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			return false;
 		}
 		break;
@@ -850,19 +851,19 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 		cout << "0. Back to categories" << endl;
 		cout << "Enter number of product :";
 		cin >> num;
-		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		backto_categories(num, Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture,  cust, no_actualusers);
 		product_information(HomeFurniture, num - 1);
 
 		cout << "Do you want to buy this product?y/n: ";
 		cin >> do_buy;
 		if (do_buy == 'y' || do_buy == 'Y') {
-			Cart(HomeFurniture, num - 1);
+			Cart(HomeFurniture, num - 1,cust);
 			counter_products++;
 			make_order = true;
 		}
 		else {
 			system("CLS");
-			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+			view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			return false;
 		}
 		break;
@@ -870,13 +871,13 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 	default:
 		cout << "Invalid Input" << endl;
 		system("pause");
-		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 	}
 
 	cout << "Do You want to checkout? y/n: ";
 	cin >> buy_again;
 	if (buy_again == 'n' || buy_again == 'N') {
-		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 	}
 	else if (buy_again == 'y' || buy_again == 'Y') {
 		if (counter_products > 0) { // that means that customer buys at least one product
@@ -885,7 +886,7 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 			cin >> modify_cart;
 			if (modify_cart == 'y' || modify_cart == 'Y') {
 				// function of modify order
-				total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 				// calculate the total price and discount
 				price_after_discount(counter_products, total_price_aftermodify);
 				system("pause");
@@ -897,18 +898,18 @@ bool view_products(int number, Category Electronics, Category VideoGames, Catego
 				//exit_program();
 
 			}
-			after_checkout();
+			after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 		}
 	}
 	else {
 		cout << "Invalid Input ";
 		system("pause");
-		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 	}
 }
 
-void searchByName(string name_product, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture) {
+void searchByName(string name_product, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture,users_information cust[100], int no_actualusers) {
 	bool product_found = false;
 	int product_no;
 	int index_no;
@@ -940,13 +941,13 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 			cout << "Do you wanna buy it? y/n: ";
 			cin >> buy;
 			if (buy == 'y' || buy == 'Y') {
-				Cart(Electronics, index_no);
+				Cart(Electronics, index_no,cust);
 				counter_products++;
 				make_order = true;
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
@@ -956,7 +957,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 						cin >> modify_cart;
 						if (modify_cart == 'y' || modify_cart == 'Y') {
 							// function of modify order
-							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust,  no_actualusers);
 							// calculate the total price and discount
 							price_after_discount(counter_products, total_price_aftermodify);
 							system("pause");
@@ -968,18 +969,18 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 							//exit_program();
 
 						}
-						after_checkout();
+						after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 					}
 				}
 			}
 			else if (buy == 'n' || buy == 'N') {
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 			else {
 				cout << "Wrong Input..." << endl;
 				system("pause");
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 		}
 		else if (product_no >= 10 && product_no < 20) {
@@ -990,7 +991,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 			cout << "Do you wanna buy it? y/n: ";
 			cin >> buy;
 			if (buy == 'y' || buy == 'Y') {
-				Cart(VideoGames, index_no);
+				Cart(VideoGames, index_no,cust);
 				counter_products++;
 				key = Generatekey();
 				cout << "Serial key to play online: " << key << endl;
@@ -1000,7 +1001,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
 					if (counter_products != 0) { // that means that customer buys at least one product
@@ -1009,7 +1010,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 						cin >> modify_cart;
 						if (modify_cart == 'y' || modify_cart == 'Y') {
 							// function of modify order
-							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 							// calculate the total price and discount
 							price_after_discount(counter_products, total_price_aftermodify);
 							system("pause");
@@ -1021,18 +1022,18 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 							//exit_program();
 
 						}
-						after_checkout();
+						after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 					}
 				}
 			}
 			else if (buy == 'n' || buy == 'N') {
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 			else {
 				cout << "Wrong Input..." << endl;
 				system("pause");
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 		}
 		else if (product_no >= 20 && product_no < 30) {
@@ -1043,13 +1044,13 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 			cout << "Do you wanna buy it? y/n: ";
 			cin >> buy;
 			if (buy == 'y' || buy == 'Y') {
-				Cart(Groceries, index_no);
+				Cart(Groceries, index_no,cust);
 				counter_products++;
 				make_order = true;
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
 					if (counter_products != 0) { // that means that customer buys at least one product
@@ -1058,7 +1059,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 						cin >> modify_cart;
 						if (modify_cart == 'y' || modify_cart == 'Y') {
 							// function of modify order
-							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 							// calculate the total price and discount
 							price_after_discount(counter_products, total_price_aftermodify);
 							system("pause");
@@ -1070,18 +1071,18 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 							//exit_program();
 
 						}
-						after_checkout();
+						after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 					}
 				}
 			}
 			else if (buy == 'n' || buy == 'N') {
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 			else {
 				cout << "Wrong Input..." << endl;
 				system("pause");
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 		}
 		else if (product_no >= 30 && product_no < 40) {
@@ -1091,13 +1092,13 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 			cout << "Do you wanna buy it? y/n: ";
 			cin >> buy;
 			if (buy == 'y' || buy == 'Y') {
-				Cart(Office, index_no);
+				Cart(Office, index_no,cust);
 				counter_products++;
 				make_order = true;
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
 					if (counter_products != 0) { // that means that customer buys at least one product
@@ -1106,7 +1107,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 						cin >> modify_cart;
 						if (modify_cart == 'y' || modify_cart == 'Y') {
 							// function of modify order
-							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 							// calculate the total price and discount
 							price_after_discount(counter_products, total_price_aftermodify);
 							system("pause");
@@ -1118,18 +1119,18 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 							//exit_program();
 
 						}
-						after_checkout();
+						after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 					}
 				}
 			}
 			else if (buy == 'n' || buy == 'N') {
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 			else {
 				cout << "Wrong Input..." << endl;
 				system("pause");
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 		}
 		else if (product_no >= 40 && product_no < 50) {
@@ -1139,13 +1140,13 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 			cout << "Do you wanna buy it? y/n: ";
 			cin >> buy;
 			if (buy == 'y' || buy == 'Y') {
-				Cart(Beauty, index_no);
+				Cart(Beauty, index_no,cust);
 				counter_products++;
 				make_order = true;
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
 					if (counter_products != 0) { // that means that customer buys at least one product
@@ -1154,7 +1155,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 						cin >> modify_cart;
 						if (modify_cart == 'y' || modify_cart == 'Y') {
 							// function of modify order
-							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 							// calculate the total price and discount
 							price_after_discount(counter_products, total_price_aftermodify);
 							system("pause");
@@ -1166,18 +1167,18 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 							//exit_program();
 
 						}
-						after_checkout();
+						after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 					}
 				}
 			}
 			else if (buy == 'n' || buy == 'N') {
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 			else {
 				cout << "Wrong Input..." << endl;
 				system("pause");
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 		}
 		else if (product_no >= 50 && product_no < 60) {
@@ -1187,13 +1188,13 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 			cout << "Do you wanna buy it? y/n: ";
 			cin >> buy;
 			if (buy == 'y' || buy == 'Y') {
-				Cart(SportSupplies, index_no);
+				Cart(SportSupplies, index_no,cust);
 				counter_products++;
 				make_order = true;
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
 					if (counter_products != 0) { // that means that customer buys at least one product
@@ -1202,7 +1203,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 						cin >> modify_cart;
 						if (modify_cart == 'y' || modify_cart == 'Y') {
 							// function of modify order
-							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture,cust, no_actualusers);
 							// calculate the total price and discount
 							price_after_discount(counter_products, total_price_aftermodify);
 							system("pause");
@@ -1214,18 +1215,18 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 							//exit_program();
 
 						}
-						after_checkout();
+						after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 					}
 				}
 			}
 			else if (buy == 'n' || buy == 'N') {
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 			else {
 				cout << "Wrong Input..." << endl;
 				system("pause");
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 		}
 		else if (product_no >= 60 && product_no < 70) {
@@ -1235,13 +1236,13 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 			cout << "Do you wanna buy it? y/n: ";
 			cin >> buy;
 			if (buy == 'y' || buy == 'Y') {
-				Cart(HomeFurniture, index_no);
+				Cart(HomeFurniture, index_no,cust);
 				counter_products++;
 				make_order = true;
 				cout << "Do You want to checkout? y/n: ";
 				cin >> buy_again;
 				if (buy_again == 'n' || buy_again == 'N') {
-					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+					view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 				}
 				else if (buy_again == 'y' || buy_again == 'Y') {
 					if (counter_products != 0) { // that means that customer buys at least one product
@@ -1250,7 +1251,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 						cin >> modify_cart;
 						if (modify_cart == 'y' || modify_cart == 'Y') {
 							// function of modify order
-							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+							total_price_aftermodify = modify_order(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 							// calculate the total price and discount
 							price_after_discount(counter_products, total_price_aftermodify);
 							system("pause");
@@ -1262,18 +1263,18 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 							//exit_program();
 
 						}
-						after_checkout();
+						after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 					}
 				}
 			}
 			else if (buy == 'n' || buy == 'N') {
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 			else {
 				cout << "Wrong Input..." << endl;
 				system("pause");
-				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+				view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 			}
 		}
 		// lw yes b if cond khaly function trg3 index_no l total price fa mn khlalh n3rf ngeb kol elbyanat
@@ -1283,7 +1284,7 @@ void searchByName(string name_product, Category Electronics, Category VideoGames
 	else {
 		cout << "Sorry we couldnt find this product...!" << endl;
 		system("pause");
-		view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 
 	}
 	//system("pause");
@@ -1300,8 +1301,8 @@ void product_information(Category nameOFcategory, int noOfProduct) {
 }
 
 
-void Cart(Category category_name, int number) {
-	//order_products.CustomerID = customer[user_index].id;
+void Cart(Category category_name, int number,users_information cust[100]) {
+	order_products.CustomerID = cust[user_index].id;
 	order_products.products_prices[counter_products] = category_name.products[number].price;
 	order_products.products_names[counter_products] = category_name.products[number].name;
 	order_products.products_categories[counter_products] = category_name.products[number].category;
@@ -1416,7 +1417,7 @@ string Generatekey() {
 	return Key;
 }
 
-double modify_order(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture) {
+double modify_order(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers) {
 	int num, numX;
 	double total_price;
 	cout << "1.add Product" << endl;
@@ -1428,7 +1429,7 @@ double modify_order(Category Electronics, Category VideoGames, Category Grocerie
 	switch (num) {
 
 	case 1:
-		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		break;
 
 	case 2:
@@ -1447,9 +1448,9 @@ double modify_order(Category Electronics, Category VideoGames, Category Grocerie
 	}
 }
 
-void backto_categories(int no, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture) {
+void backto_categories(int no, Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers) {
 	if (no == 0) {
-		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		view_categories(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 	}
 }
 
@@ -1467,9 +1468,9 @@ void reorder_information() {
 	counter_products = 0;
 	videogames_counter = 0;
 }
-void logout(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture) {
+void logout(Category Electronics, Category VideoGames, Category Groceries, Category Office, Category Beauty, Category SportSupplies, Category HomeFurniture, users_information cust[100], int no_actualusers) {
 	reorder_information();
-	view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+	view_menu(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 }
 void exit_program() {
 	exit(0);
@@ -1493,13 +1494,13 @@ void after_checkout(Category Electronics, Category VideoGames, Category Grocerie
 	switch (no) {
 	case 1:
 		system("CLS");
-		logout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		logout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		break;
 	case 2:
 		system("CLS");
 		//reorder_information();
 		login_register_menu(cust, no_actualusers);
-		logout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture);
+		logout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		//view_menu();
 		break;
 	case 3:
@@ -1508,7 +1509,7 @@ void after_checkout(Category Electronics, Category VideoGames, Category Grocerie
 	default:
 		cout << "Invalid Input..." << endl;
 		system("pause");
-		after_checkout();
+		after_checkout(Electronics, VideoGames, Groceries, Office, Beauty, SportSupplies, HomeFurniture, cust, no_actualusers);
 		break;
 	}
 

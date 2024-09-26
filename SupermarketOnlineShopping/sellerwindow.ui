@@ -1,0 +1,2220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SellerWindow</class>
+ <widget class="QMainWindow" name="SellerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1167</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1161</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1161</width>
+       <height>621</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QWidget" name="login_page">
+      <property name="styleSheet">
+       <string notr="true">QWidget#login_page{
+background-color: white;
+}</string>
+      </property>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>168</x>
+         <y>143</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="login_btn_loginpage">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>450</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #BD1616;
+color: #FFFFFF;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>140</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>E-mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>10</y>
+         <width>501</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #BD1616;
+font-size: 35px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Supermarket online shopping</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="email_input_login">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>170</y>
+         <width>371</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="password_input_login">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>300</y>
+         <width>371</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="forget_password_btn_login">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>370</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 20px;
+color: #11405C;
+font-weight: bold;
+border-width: 1px;
+border-color: red;
+border-radius: 2px;</string>
+       </property>
+       <property name="text">
+        <string>Forgot password?</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>205</x>
+         <y>273</y>
+         <width>63</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="register_btn_loginpage">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>450</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: #BD1616;
+border-style:solid;
+border-width: 2px;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Register</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>270</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_hide_login">
+       <property name="geometry">
+        <rect>
+         <x>418</x>
+         <y>316</y>
+         <width>21</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/hide.png</normaloff>:/imgs/sellereyepass/hide.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_view_login">
+       <property name="geometry">
+        <rect>
+         <x>418</x>
+         <y>316</y>
+         <width>21</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/view.png</normaloff>:/imgs/sellereyepass/view.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_35">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>60</y>
+         <width>651</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/imgs/seller_login/seller_login_illustration.png</pixmap>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Register_page">
+      <property name="styleSheet">
+       <string notr="true">QWidget#Register_page{
+background-color: white;
+}</string>
+      </property>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>110</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>10</y>
+         <width>501</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #BD1616;
+font-size: 35px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Supermarket online Shopping</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="login_btn_rpage">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>540</y>
+         <width>121</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: #BD1616;
+border-style:solid;
+border-width: 2px;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fullname_input">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>100</y>
+         <width>361</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="register_btnn_rpage">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>540</y>
+         <width>121</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #BD1616;
+color: #FFFFFF;
+border-radius: 10px;
+font-size: 25px;
+font-weight: bold</string>
+       </property>
+       <property name="text">
+        <string>Register</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>105</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>Full Name</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>270</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>320</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>315</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>Phone Number</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>170</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="email_input_register">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>210</y>
+         <width>361</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>265</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="password_input_register">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>260</y>
+         <width>361</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>215</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>E-mail</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="phonenumber_register">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>310</y>
+         <width>361</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="day_register">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>360</y>
+         <width>71</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 20px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Day</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="month_register">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>360</y>
+         <width>71</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 20px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Month</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="year_register">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>360</y>
+         <width>71</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 20px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Year</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>365</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;
+</string>
+       </property>
+       <property name="text">
+        <string>Date Of Birth</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>450</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="username_input">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>160</y>
+         <width>361</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #C81818;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>134</x>
+         <y>220</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>165</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>Username</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_hide_register">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>265</y>
+         <width>21</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/hide.png</normaloff>:/imgs/sellereyepass/hide.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_view_register">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>265</y>
+         <width>21</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/view.png</normaloff>:/imgs/sellereyepass/view.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="profile_photo_image">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>462</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>upload your photo</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="gender_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>420</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #C81818;
+color : #ffffff;
+font-weight: bold;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>male</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>female</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>415</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;
+</string>
+       </property>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>465</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;
+color: #11405C;
+</string>
+       </property>
+       <property name="text">
+        <string>Profile Photo</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_37">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>120</y>
+         <width>541</width>
+         <height>411</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/imgs/seller_register/seller_register_illustration.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>370</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_38">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>420</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkbox_agreeto_policy">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>510</y>
+         <width>21</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="agreements_btn">
+       <property name="geometry">
+        <rect>
+         <x>77</x>
+         <y>506</y>
+         <width>511</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: bold;
+color: #11405C;</string>
+       </property>
+       <property name="text">
+        <string>I agree to the terms of supermarket seller agreement and privacy policy</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="forget_password">
+      <widget class="QLineEdit" name="id_input_forgot">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>320</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+border-color: #B6AFAF;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+font-size: 20px;
+text-align: center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your ID ...</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="newpassword_input">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>480</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+border-color: #B6AFAF;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+font-size: 20px;
+text-align: center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter New Password</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>40</y>
+         <width>271</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter your&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Verification code&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+font-weight: bold;
+font-size: 30px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Forgot Password&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Page&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>100</y>
+         <width>31</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/imgs/home/seller_forget.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>170</y>
+         <width>241</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: grey;
+font-weight: bold;
+font-size: 16px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter Your ID&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;to make new password&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="confirmnewpassword_btn">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>540</y>
+         <width>211</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 17px;
+background-color: #BD1616 ;
+font-weight: bold;
+font-size: 20px;
+color: white;</string>
+       </property>
+       <property name="text">
+        <string>Confirm</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="verifyidentity">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>320</y>
+         <width>211</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 17px;
+background-color: #BD1616 ;
+font-weight: bold;
+font-size: 20px;
+color: white;</string>
+       </property>
+       <property name="text">
+        <string>Verify your identity</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="email_input_forgot">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>250</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+border-color: #B6AFAF;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+font-size: 20px;
+text-align: center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter Your Email...</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="username_input_forgot">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>390</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+border-color: #B6AFAF;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+font-size: 20px;
+text-align: center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your Username ...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_view_forget">
+       <property name="geometry">
+        <rect>
+         <x>644</x>
+         <y>492</y>
+         <width>21</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/view.png</normaloff>:/imgs/sellereyepass/view.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_hide_forget">
+       <property name="geometry">
+        <rect>
+         <x>644</x>
+         <y>492</y>
+         <width>21</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/hide.png</normaloff>:/imgs/sellereyepass/hide.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="back_btn">
+       <property name="geometry">
+        <rect>
+         <x>990</x>
+         <y>550</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: bold;
+color: white;
+background-color: black;
+border-radius: 3px;</string>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+      <zorder>id_input_forgot</zorder>
+      <zorder>newpassword_input</zorder>
+      <zorder>label_18</zorder>
+      <zorder>label_19</zorder>
+      <zorder>label_20</zorder>
+      <zorder>confirmnewpassword_btn</zorder>
+      <zorder>verifyidentity</zorder>
+      <zorder>email_input_forgot</zorder>
+      <zorder>username_input_forgot</zorder>
+      <zorder>eyepassword_hide_forget</zorder>
+      <zorder>eyepassword_view_forget</zorder>
+      <zorder>back_btn</zorder>
+     </widget>
+     <widget class="QWidget" name="home_page">
+      <widget class="QFrame" name="frame">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1161</width>
+         <height>621</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1161</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame#frame_2{
+
+background-color: white;
+border-bottom-style: solid;
+border-bottom-color: rgb(170, 0, 0);
+border-bottom-width: 5px;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_29">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>10</y>
+           <width>221</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold;
+font-size: 35px;
+color: #BD1616;
+</string>
+         </property>
+         <property name="text">
+          <string>Supermarket</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="add_product">
+         <property name="geometry">
+          <rect>
+           <x>418</x>
+           <y>30</y>
+           <width>111</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000000;
+font-weight: bold;
+</string>
+         </property>
+         <property name="text">
+          <string>Add Product</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="profile_stting_btn">
+         <property name="geometry">
+          <rect>
+           <x>730</x>
+           <y>30</y>
+           <width>111</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000000;
+font-weight: bold;
+</string>
+         </property>
+         <property name="text">
+          <string>Profile Setting</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="view_products">
+         <property name="geometry">
+          <rect>
+           <x>568</x>
+           <y>30</y>
+           <width>131</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000000;
+font-weight: bold;
+</string>
+         </property>
+         <property name="text">
+          <string>view my products</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_30">
+         <property name="geometry">
+          <rect>
+           <x>912</x>
+           <y>30</y>
+           <width>121</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold;
+font-size: 15px;
+color: #BD1616;
+</string>
+         </property>
+         <property name="text">
+          <string>Account Balance:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="acc_balance_value">
+         <property name="geometry">
+          <rect>
+           <x>1040</x>
+           <y>30</y>
+           <width>81</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold;
+font-size: 15px;
+color: #BD1616;
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="home_btn">
+         <property name="geometry">
+          <rect>
+           <x>298</x>
+           <y>30</y>
+           <width>111</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #000000;
+font-weight: bold;
+</string>
+         </property>
+         <property name="text">
+          <string>HOME</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QStackedWidget" name="stackedWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>70</y>
+          <width>1161</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <widget class="QWidget" name="home_pagee">
+         <property name="styleSheet">
+          <string notr="true">QWidget#home_pagee{
+background-image: url(:/imgs/seller_home/seller_background_home.png);
+} /*for making its children not inherit anything*/</string>
+         </property>
+         <widget class="QLabel" name="label_23">
+          <property name="geometry">
+           <rect>
+            <x>500</x>
+            <y>110</y>
+            <width>211</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+font-size: 50px;
+color: #000000;
+</string>
+          </property>
+          <property name="text">
+           <string>Get Your</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_24">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>200</y>
+            <width>191</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+font-size: 50px;
+color: #BD1616;
+</string>
+          </property>
+          <property name="text">
+           <string>Product</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_25">
+          <property name="geometry">
+           <rect>
+            <x>620</x>
+            <y>200</y>
+            <width>191</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+font-size: 50px;
+color: #11405C;
+</string>
+          </property>
+          <property name="text">
+           <string>A Buyer</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_26">
+          <property name="geometry">
+           <rect>
+            <x>520</x>
+            <y>280</y>
+            <width>181</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+font-size: 50px;
+color: #000000;
+</string>
+          </property>
+          <property name="text">
+           <string>Quickly</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_27">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>370</y>
+            <width>471</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: light;
+font: 350 13pt &quot;Segoe UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;we provide you the best way to sell your products&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;whatever it is&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="add_products_now">
+          <property name="geometry">
+           <rect>
+            <x>490</x>
+            <y>460</y>
+            <width>251</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+color: white;
+font-size: 20px;
+
+background-color: #BD1616;
+border-radius: 8px;</string>
+          </property>
+          <property name="text">
+           <string>Add your product now</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_28">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>20</y>
+            <width>191</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+color: white;
+font-size: 40px;
+</string>
+          </property>
+          <property name="text">
+           <string>Welcome,</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="name_of_seller">
+          <property name="geometry">
+           <rect>
+            <x>620</x>
+            <y>20</y>
+            <width>521</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+color: white;
+font-size: 40px;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="logout">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>490</y>
+            <width>93</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight: bold;
+color: white;
+background-color: black;
+font-size: 20px;
+border-radius: 4px;</string>
+          </property>
+          <property name="text">
+           <string>logout</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="add_product_page">
+         <widget class="QWidget" name="widget_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1161</width>
+            <height>551</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget#widget_4{
+
+	background-image: url(:/imgs/seller_home/add_product_background.png);
+	background-position: center;
+
+background-repeat: no-repeat;
+}</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>30</y>
+             <width>621</width>
+             <height>481</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="5" column="1">
+             <widget class="QPushButton" name="addproduct_btn">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>80</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold;
+color: white;
+background-color: #BD1616;
+border-radius: 5px;
+font-size: 30px;</string>
+              </property>
+              <property name="text">
+               <string>Add Product</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLabel" name="label_39">
+                  <property name="styleSheet">
+                   <string notr="true">font-weight: bold;
+color: #11405C;
+font-size: 25px;</string>
+                  </property>
+                  <property name="text">
+                   <string>Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="product_name">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>500</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QLabel" name="label_40">
+                  <property name="styleSheet">
+                   <string notr="true">font-weight: bold;
+color: #11405C;
+font-size: 25px;</string>
+                  </property>
+                  <property name="text">
+                   <string>Category</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_category">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font-weight: bold;
+color: white;
+font-size: 20px;
+background-color: #BD1616</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Electronics</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>VideoGames</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Groceries</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Office</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Beauty</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>HomeFurniture</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SportsSupplies</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QLabel" name="label_41">
+                  <property name="styleSheet">
+                   <string notr="true">font-weight: bold;
+color: #11405C;
+font-size: 25px;</string>
+                  </property>
+                  <property name="text">
+                   <string>Price</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="product_price">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>500</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="maxLength">
+                   <number>4</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QLabel" name="label_42">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font-weight: bold;
+color: #11405C;
+font-size: 25px;</string>
+                  </property>
+                  <property name="text">
+                   <string>Stock</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="product_stock">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>500</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="maxLength">
+                   <number>3</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <item>
+                 <widget class="QLabel" name="label_43">
+                  <property name="styleSheet">
+                   <string notr="true">font-weight: bold;
+color: #11405C;
+font-size: 25px;</string>
+                  </property>
+                  <property name="text">
+                   <string>Expiration date</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="dateEdit"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <item>
+                 <widget class="QLabel" name="label_44">
+                  <property name="styleSheet">
+                   <string notr="true">font-weight: bold;
+color: #11405C;
+font-size: 25px;</string>
+                  </property>
+                  <property name="text">
+                   <string>Image of product</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="upload_image_btn">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>choose file..</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_45">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold;
+font-size: 50px;
+</string>
+              </property>
+              <property name="text">
+               <string>Add Product</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="view_products_page">
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1161</width>
+            <height>551</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_4">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1159</width>
+             <height>549</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="changeprofile_setting_page">
+         <widget class="QScrollArea" name="scrollArea_4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1161</width>
+            <height>551</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1159</width>
+             <height>549</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="agreement_policy_page">
+      <property name="styleSheet">
+       <string notr="true">QWidget#agreement_policy_page{
+background-color: white;
+}</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>560</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: bold;
+color: white;
+background-color: black;
+border-radius: 3px;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>40</y>
+         <width>771</width>
+         <height>511</height>
+        </rect>
+       </property>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>771</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>769</width>
+           <height>509</height>
+          </rect>
+         </property>
+         <widget class="QTextBrowser" name="textBrowser">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>771</width>
+            <height>511</height>
+           </rect>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We collect your personal information in order to provide and continually improve our products and services.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Here are the types of personal information we collect:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Information You Give Us: We receive and store any information you provide in relation to Supermarket Services. Click here to see examples of what we collect. You can choose not to provide certain information, but then you might not be able to take advantage of many of our Supermarket Services.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Automatic Information: We automatically collect and store certain types of information about your use of Supermarket Services, including information about your interaction with products, content, and services available through Supermarket Services. Like many websites, we use &amp;quot;cookies&amp;quot; and other unique identifiers, and we obtain certain types of information when your web browser or device accesses Supermarket Services and other content served by or on behalf of Supermarket on other websites. Our physical stores may use cameras, computer vision, sensors, and other technology to gather information about your activity in the store, such as the products and services you interact with. Click here to see examples of what we collect.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Information from Other Sources: We might receive information about you from other sources, such as updated delivery and address information from our carriers, which we use to correct our records and deliver your next purchase more easily. Click here to see additional examples of the information we receive.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;For What Purposes Does Supermarket Use Your Personal Information?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We use your personal information to operate, provide, develop, and improve the products and services that we offer our customers. These purposes include:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Purchase and delivery of products and services. We use your personal information to take and handle orders, deliver products and services, process payments, and communicate with you about orders, products and services, and promotional offers.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Provide, troubleshoot, and improve Supermarket Services. We use your personal information to provide functionality, analyze performance, fix errors, and improve the usability and effectiveness of the Supermarket Services.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Recommendations and personalization. We use your personal information to recommend features, products, and services that might be of interest to you, identify your preferences, and personalize your experience with Supermarket Services.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Provide voice, image and camera services. When you use our voice, image and camera services, we use your voice input, images, videos, and other personal information to respond to your requests, provide the requested service to you, and improve our services. For more information about Alexa voice services , click here.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Comply with legal obligations. In certain cases, we collect and use your personal information to comply with laws. For instance, we collect from sellers information regarding place of establishment and bank account information for identity verification and other purposes.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Communicate with you. We use your personal information to communicate with you in relation to Supermarket Services via different channels (e.g., by phone, email, chat).&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Advertising. We use your personal information to display interest-based ads for features, products, and services that might be of interest to you. We do not use information that personally identifies you to display interest-based ads. To learn more, please read our Interest-Based Ads notice.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fraud Prevention and Credit Risks. We use personal information to prevent and detect fraud and abuse in order to protect the security of our customers, Supermarket, and others. We may also use scoring methods to assess and manage credit risks.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;What About Cookies and Other Identifiers?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;To enable our systems to recognize your browser or device and to provide and improve Supermarket Services, we use cookies and other identifiers. For more information about cookies and how we use them, please read our Cookies Notice.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Does Supermarket Share Your Personal Information?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Information about our customers is an important part of our business, and we are not in the business of selling our customers' personal information to others. We share customers' personal information only as described below and with subsidiaries Supermarket.com, Inc. controls that either are subject to this Privacy Notice or follow practices at least as protective as those described in this Privacy Notice.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Transactions involving Third Parties: We make available to you services, products, applications, or skills provided by third parties for use on or through Supermarket Services. For example, you can order products from third parties through our stores, download applications from third-party application providers from our App Store, and enable third-party skills through our Alexa services. We also offer services or sell product lines jointly with third-party businesses, such as co-branded credit cards. You can tell when a third party is involved in your transactions, and we share customers' personal information related to those transactions with that third party.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Third-Party Service Providers: We employ other companies and individuals to perform functions on our behalf. Examples include fulfilling orders for products or services, delivering packages, sending postal mail and email, removing repetitive information from customer lists, analyzing data, providing marketing assistance, providing search results and links (including paid listings and links), processing payments, transmitting content, scoring, assessing and managing credit risk, and providing customer service. These third-party service providers have access to personal information needed to perform their functions, but may not use it for other purposes.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Business Transfers: As we continue to develop our business, we might sell or buy other businesses or services. In such transactions, customer information generally is one of the transferred business assets but remains subject to the promises made in any pre-existing Privacy Notice (unless, of course, the customer consents otherwise). Also, in the unlikely event that Supermarket.com, Inc. or substantially all of its assets are acquired, customer information will of course be one of the transferred assets.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Protection of Supermarket and Others: We release account and other personal information when we believe release is appropriate to comply with the law; enforce or apply our Conditions of Use and other agreements; or protect the rights, property, or safety of Supermarket, our users, or others. This includes exchanging information with other companies and organizations for fraud protection and credit risk reduction.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Other than as set out above, you will receive notice when personal information about you might be shared with third parties, and you will have an opportunity to choose not to share the information.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;How Secure Is Information About Me?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We design our systems with your security and privacy in mind.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We work to protect the security of your personal information during transmission by using encryption protocols and software.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We follow the Payment Card Industry Data Security Standard (PCI DSS) when handling credit card data.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We maintain physical, electronic, and procedural safeguards in connection with the collection, storage, and disclosure of customer personal information. Our security procedures mean that we may ask to verify your identity before we disclose personal information to you.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Our devices offer security features to protect them against unauthorized access and loss of data. You can control these features and configure them based on your needs. Click here for more information on how to manage the security settings of your device.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;It is important for you to protect against unauthorized access to your password and to your computers, devices, and applications. We recommend using a unique password for your Supermarket account that is not used for other online accounts. Be sure to sign off when finished using a shared computer. Click here for more information on how to sign off.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;What About Advertising?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Third-Party Advertisers and Links to Other Websites: Supermarket Services may include third-party advertising and links to other websites and apps. Third-party advertising partners may collect information about you when you interact with their content, advertising, and services. For more information about third-party advertising at Supermarket, including interest-based ads, please read our Interest-Based Ads notice. To adjust your advertising preferences, please go to the Your Ads Privacy Choices page.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Use of Third-Party Advertising Services: We provide ad companies with information that allows them to serve you with more useful and relevant Supermarket ads and to measure their effectiveness. We never share your name or other information that directly identifies you when we do this. Instead, we use an advertising identifier like a cookie, a device identifier, or a code derived from applying irreversible cryptography to other information like an email address. For example, if you have already downloaded one of our apps, we will share your advertising identifier and data about that event so that you will not be served an ad to download the app again. While we do not share your specific shopping actions like purchases, product views, or searches with ad companies, we may share an advertising identifier and an estimate of the value of the ads they show you on our behalf so they can serve you with more effective Supermarket ads. Some ad companies also use this information to serve you relevant ads from other advertisers. You can learn more about how to opt-out of personalized advertising (such as cross-context behavioral advertising) by going to the Your Ads Privacy Choices page.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;What Information Can I Access?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can access your information, including your name, address, payment options, profile information, Prime membership, household settings, and purchase history in the &amp;quot;Your Account&amp;quot; section of the website. Click here for a list of examples that you can access.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;What Choices Do I Have?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you have any questions as to how we collect and use your personal information, please contact our Customer Service. Many of our Supermarket Services also include settings that provide you with options as to how your information is being used.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;As described above, you can choose not to provide certain information, but then you might not be able to take advantage of many of the Supermarket Services.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can add or update certain information on pages such as those referenced in What Information Can I Access?. When you update information, we usually keep a copy of the prior version for our records.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you do not want to receive email or other communications from us, please adjust your Customer Communication Preferences. If you don't want to receive in-app notifications from us, please adjust your notification settings in the app or device.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You may adjust your personalized advertising preferences by visiting Your Ads Privacy Choices.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Help feature on most browsers and devices will tell you how to prevent your browser or device from accepting new cookies or other identifiers, how to have the browser notify you when you receive a new cookie, or how to block cookies altogether. Because cookies and identifiers allow you to take advantage of some essential features of Supermarket Services, we recommend that you leave them turned on. For instance, if you block or otherwise reject our cookies, you will not be able to add items to your Shopping Cart, proceed to Checkout, or use any Services that require you to Sign in. For more information about cookies and other identifiers, see our Cookies Notice.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you want to browse our websites without linking the browsing history to your account, you may do so by logging out of your account here and blocking cookies on your browser.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can manage the recommendations you receive in our store here, remove recommendations you don’t want to see here by selecting View All and Manage then selecting the Remove Items toggle that appears at the top of the page, and edit your browsing history here.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You will also be able to opt out of certain other types of data usage by updating your settings on the applicable Supermarket website (e.g., in &amp;quot;Manage Your Content and Devices&amp;quot;), device, or application. For more information click here. Most non-Supermarket devices also provide users with the ability to change device permissions (e.g., disable/access location services, contacts). For most devices, these controls are located in the device's settings menu. If you have questions about how to change your device permissions on devices manufactured by third parties, we recommend you contact your mobile service carrier or your device manufacturer.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you are a seller, you can add or update certain information in Seller Central, update your account information by accessing your Seller Account Information, and adjust your email or other communications you receive from us by updating your Notification Preferences.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you are an author, you can add or update the information you have provided in the Author Portal and Author Central by accessing your accounts in the Author Portal and Author Central, respectively.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you shop in our physical stores, you can manage how certain data is used to analyze the performance of our products and services, as well as learn more here.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;In addition, to the extent required by applicable law, you may have the right to request access to or delete your personal information. If you wish to do any of these things, you may go to Data Privacy Queries. Depending on your data choices, certain services may be limited or unavailable.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Are Children Allowed to Use Supermarket Services?&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Supermarket does not sell products for purchase by children. We sell children's products for purchase by adults. If you are under 18, you may use Supermarket Services only with the involvement of a parent or guardian. We do not knowingly collect personal information from children under the age of 13 without the consent of the child's parent or guardian. For more information, please see our Children's Privacy Disclosure.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;EU-US and Swiss-US Privacy Shield&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Supermarket.com, Inc. participates in the EU-US and Swiss-US Privacy Shield frameworks. Click here to learn more.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Additional State-Specific Privacy Disclosures&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Click here to read additional state-specific privacy disclosures as required under applicable laws.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Conditions of Use, Notices, and Revisions&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you choose to use Supermarket Services, your use and any dispute over privacy is subject to this Notice and our Conditions of Use, including limitations on damages, resolution of disputes, and application of the law of the state of Washington. If you have any concern about privacy at Supermarket, please contact us with a thorough description, and we will try to resolve it. Our business changes constantly, and our Privacy Notice will change also. You should check our websites frequently to see recent changes. Unless stated otherwise, our current Privacy Notice applies to all information that we have about you and your account. We stand behind the promises we make, however, and will never materially change our policies and practices to make them less protective of customer information collected in the past without the consent of affected customers.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Related Practices and Information&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Conditions of Use&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Seller Program Policies&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Help pages&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Most Recent Purchases&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Community Guidelines&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Examples of Information Collected&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Information You Give Us When You Use Supermarket Services&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You provide information to us when you:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;search or shop for products or services in our stores;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;add or remove an item from your cart, or place an order through or use Supermarket Services;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;download, stream, view, or use content on a device or through a service or application on a device;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;provide information in Your Account (and you might have more than one if you have used more than one email address or mobile number when shopping with us) or Your Profile ;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;talk to or otherwise interact with our Alexa Voice service;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;upload your contacts;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;configure your settings on, provide data access permissions for, or interact with an Supermarket device or service;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;provide information in your Seller Account , Kindle Direct Publishing account , Developer account , or any other account we make available that allows you to develop or offer software, goods, or services to Supermarket customers;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;offer your products or services on or through Supermarket Services;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;communicate with us by phone, email, or otherwise;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;complete a questionnaire, a support ticket, or a contest entry form;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;upload or stream images, videos or other files to Prime Photos, Supermarket Drive, or other Supermarket Services;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;use our services such as Prime Video;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;compile Playlists, Watchlists, Wish Lists or other gift registries;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;participate in Discussion Boards or other community features;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;provide and rate Reviews;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;specify a Special Occasion Reminder; or&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;employ Product Availability Alerts , such as Available to Order Notifications.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;As a result of those actions, you might supply us with such information as:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;identifying information such as your name, address, and phone numbers;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;payment information;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;your age;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;your location information;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;your IP address;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;people, addresses and phone numbers listed in your Addresses;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;email addresses of your friends and other people;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;content of reviews and emails to us;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;personal description and photograph in Your Profile;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;voice recordings when you speak to Alexa;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;images and videos collected or stored in connection with Supermarket Services;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;information and documents regarding identity, including Social Security and driver's license numbers;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;corporate and financial information;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;credit history information; and&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;device log files and configurations, including Wi-Fi credentials, if you choose to automatically synchronize them with your other Supermarket devices.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Automatic Information&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Examples of the information we collect and analyze include:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;the internet protocol (IP) address used to connect your computer to the internet;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;login, email address, and password;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;the location of your device or computer;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;content interaction information, such as content downloads, streams, and playback details, including duration and number of simultaneous streams and downloads, and network details for streaming and download quality, including information about your internet service provider;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;device metrics such as when a device is in use, application usage, connectivity data, and any errors or event failures;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Supermarket Services metrics (e.g., the occurrences of technical errors, your interactions with service features and content, your settings preferences and backup information, location of your device running an application, information about uploaded images and files such as the file name, dates, times and location of your images);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;version and time zone settings;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;purchase and content use history, which we sometimes aggregate with similar information from other customers to create features like Top Sellers;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;the full Uniform Resource Locator (URL) clickstream to, through, and from our websites, including date and time; products and content you viewed or searched for; page response times, download errors, length of visits to certain pages, and page interaction information (such as scrolling, clicks, and mouse-overs);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;phone numbers used to call our customer service number; and&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;images or videos when you shop in our stores, or stores using Supermarket Services.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We may also use device identifiers, cookies, and other technologies on devices, applications, and our web pages to collect browsing, usage, or other technical information.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Information from Other Sources&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Examples of information we receive from other sources include:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;updated delivery and address information from our carriers or other third parties, which we use to correct our records and deliver your next purchase or communication more easily;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;account information, purchase or redemption information, and page-view information from some merchants with which we operate co-branded businesses or for which we provide technical, fulfillment, advertising, or other services;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;information about your interactions with products and services offered by our subsidiaries;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;search results and links, including paid listings (such as Sponsored Links);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;information about internet-connected devices and services linked with Alexa; and&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;credit history information from credit bureaus, which we use to help prevent and detect fraud and to offer certain credit or financial services to some customers.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Information You Can Access&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Examples of information you can access through Supermarket Services include:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;status of recent orders (including subscriptions);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;your complete order history;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;personally identifiable information (including name, email, password, and address book);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;payment settings (including payment card information, promotional certificate and gift card balances, and 1-Click settings);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;email notification settings (including Product Availability Alerts, Delivers, Special Occasion Reminders and newsletters);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;recommendations and the products you recently viewed that are the basis for recommendations (including Recommended for You and Improve Your Recommendations);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;shopping lists and gift registries (including Wish Lists and Baby and Wedding Registries);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;your content, devices, services, and related settings, and communications and personalized advertising preferences;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;content that you recently viewed;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;voice recordings associated with your account;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Your Profile (including your product Reviews, Recommendations, Reminders and personal profile);&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you are a seller, you can access your account and other information, and adjust your communications preferences, by updating your account in Seller Central.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you are an author, you can access your account and other information, and update your accounts, on the Kindle Direct Publishing (KDP) or Author Central website, as applicable.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you are a developer participating in our Developer Services Program, you can access your account and other information, and adjust your communications preferences, by updating your accounts in the Developer Services Portal.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1167</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

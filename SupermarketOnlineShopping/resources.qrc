@@ -1,0 +1,176 @@
+<RCC>
+    <qresource prefix="/imgs/login_page">
+        <file>login.svg</file>
+        <file>Login_page_9.png</file>
+        <file>iconofshopping.svg</file>
+        <file>casio.jpg</file>
+        <file>code.svg</file>
+    </qresource>
+    <qresource prefix="/imgs/register_page">
+        <file>icon_check.svg</file>
+        <file>register.svg</file>
+        <file>Register_page_2.png</file>
+        <file>Register_page_3.png</file>
+        <file>hide.png</file>
+        <file>view.png</file>
+        <file>image.png</file>
+    </qresource>
+    <qresource prefix="/imgs/Electronics">
+        <file>acer.png</file>
+        <file>applewatch.jpg</file>
+        <file>iphone11.png</file>
+        <file>iphone12.jpg</file>
+        <file>lg55.jpg</file>
+        <file>lg65.png</file>
+        <file>msi.png</file>
+        <file>notebook.jpg</file>
+        <file>samsung65.jpg</file>
+        <file>samsungwatch.png</file>
+    </qresource>
+    <qresource prefix="/imgs/Videogames">
+        <file>battlefield.jpg</file>
+        <file>cod.jpg</file>
+        <file>crysis.png</file>
+        <file>fifa23.jpg</file>
+        <file>gtv.jpg</file>
+        <file>howgarts.jpg</file>
+        <file>pes21.jpg</file>
+        <file>pes23.png</file>
+        <file>reddeadredemption.jpg</file>
+        <file>residentevil.jpg</file>
+        <file>spiderman.jpg</file>
+    </qresource>
+    <qresource prefix="/imgs/Groceries">
+        <file>beef.jpeg</file>
+        <file>cadruby.png</file>
+        <file>cheddar.png</file>
+        <file>chickenbreast.png</file>
+        <file>chickenthigh.png</file>
+        <file>chocolate.jpg</file>
+        <file>chocolate2.png</file>
+        <file>corn.png</file>
+        <file>Sadlers.jpg</file>
+        <file>spinach.png</file>
+        <file>sweetpotato.png</file>
+    </qresource>
+    <qresource prefix="/imgs/Office">
+        <file>casio.jpg</file>
+        <file>childdrawing.jpg</file>
+        <file>desk.jpg</file>
+        <file>deskorganizer.jpg</file>
+        <file>gamingdesk.jpg</file>
+        <file>homeoffice.jpg</file>
+        <file>pens.jpg</file>
+        <file>shredder.jpg</file>
+        <file>stapler.jpg</file>
+        <file>whiteboard.png</file>
+    </qresource>
+    <qresource prefix="/imgs/Beauty">
+        <file>creamface.jpg</file>
+        <file>facewash.jpg</file>
+        <file>facewash2.jpg</file>
+        <file>hairdryer.jpg</file>
+        <file>kisslip.jpg</file>
+        <file>lipbalm.jpg</file>
+        <file>lipgloss.png</file>
+        <file>mascara.jpg</file>
+        <file>shampoo.jpg</file>
+        <file>spray.jpg</file>
+    </qresource>
+    <qresource prefix="/imgs/Homefurniture">
+        <file>beddrawers.jpg</file>
+        <file>cleaner.jpg</file>
+        <file>clock.jpg</file>
+        <file>clothdryer.jpg</file>
+        <file>curtain.jpg</file>
+        <file>fryer.png</file>
+        <file>massageshelving.jpg</file>
+        <file>queenbed.jpg</file>
+        <file>steelshelving.jpg</file>
+        <file>widedrawer.png</file>
+    </qresource>
+    <qresource prefix="/imgs/Sportsupplies">
+        <file>baseballbackpack.png</file>
+        <file>bike.jpg</file>
+        <file>boot.jpg</file>
+        <file>eastonbackpack.jpg</file>
+        <file>nike.jpg</file>
+        <file>nikejunior.png</file>
+        <file>softballbag.jpg</file>
+        <file>tennisracquet.jpg</file>
+        <file>trampoline.jpg</file>
+        <file>youthbakcpack.jpg</file>
+    </qresource>
+    <qresource prefix="/imgs/dashboard">
+        <file>dashboard.jpg</file>
+        <file>home.png</file>
+    </qresource>
+    <qresource prefix="/imgs/home">
+        <file>cart-home.png</file>
+        <file>home2.png</file>
+        <file>homeee.png</file>
+        <file>magnifier.png</file>
+        <file>magnifier_2.png</file>
+        <file>background_home.png</file>
+        <file>seller_homee.png</file>
+        <file>customer_home.png</file>
+        <file>background_main.png</file>
+        <file>background_main2.png</file>
+        <file>background_main3.png</file>
+        <file>seller_forget.png</file>
+    </qresource>
+    <qresource prefix="/imgs/rating">
+        <file>star_off.png</file>
+        <file>star_on.png</file>
+    </qresource>
+    <qresource prefix="/imgs/seller">
+        <file>subscribe_off.png</file>
+        <file>subscribe_on.png</file>
+    </qresource>
+    <qresource prefix="/imgs/toolbar">
+        <file>cart.png</file>
+        <file>categories.png</file>
+        <file>dashboard.png</file>
+        <file>prev_order.png</file>
+        <file>profilesettings.png</file>
+        <file>seller.png</file>
+    </qresource>
+    <qresource prefix="/imgs/categories">
+        <file>electronics.jpg</file>
+        <file>electronics_2.jpg</file>
+    </qresource>
+    <qresource prefix="/imgs/gender">
+        <file>male.png</file>
+        <file>female.png</file>
+    </qresource>
+    <qresource prefix="/imgs/sellereyepass">
+        <file>hide.png</file>
+        <file>view.png</file>
+    </qresource>
+    <qresource prefix="/imgs/seller_register">
+        <file>seller_register.png</file>
+        <file>seller_register_illustration.png</file>
+        <file>seller_register2.jpg</file>
+    </qresource>
+    <qresource prefix="/imgs/seller_login">
+        <file>seller_login_illustration.png</file>
+    </qresource>
+    <qresource prefix="/imgs/seller_home">
+        <file>seller_background_home.png</file>
+        <file>seller_home.png</file>
+        <file>add_product_background.png</file>
+    </qresource>
+    <qresource prefix="/imgs/box_coupons">
+        <file>box_closed.png</file>
+        <file>box_open_coupon.png</file>
+        <file>box_open_coupon2.png</file>
+        <file>boxopen_empty.png</file>
+        <file>background-coupons.jpg</file>
+    </qresource>
+    <qresource prefix="/imgs/checkout">
+        <file>background_checkout.png</file>
+        <file>174861.png</file>
+        <file>visa_PNG15.png</file>
+        <file>visa-and-mastercard-logo-26.png</file>
+    </qresource>
+</RCC>

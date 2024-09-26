@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowLogin</class>
+ <widget class="QMainWindow" name="MainWindowLogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1167</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:white;
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="pages">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1151</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QWidget" name="login">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1151</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>702</x>
+         <y>187</y>
+         <width>371</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #1E36B7;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>942</x>
+         <y>467</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #1E36B7;
+color: #FFFFFF;
+border-radius: 10px;
+font-size: 20px;</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="view">
+       <property name="geometry">
+        <rect>
+         <x>1032</x>
+         <y>335</y>
+         <width>31</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/register_page/view.png</normaloff>:/imgs/register_page/view.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>827</x>
+         <y>290</y>
+         <width>63</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>702</x>
+         <y>67</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #112f91;
+font-size: 35px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Supermarket online</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>42</x>
+         <y>17</y>
+         <width>521</width>
+         <height>561</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(&quot;:/imgs/login_page/login.svg&quot;);
+background-repeat: no-repeat;
+background-position: center;
+border-style:none;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>1027</x>
+         <y>82</y>
+         <width>31</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(&quot;:/imgs/login_page/iconofshopping.svg&quot;);
+background-repeat: no-repeat;
+background-position: center;
+border-style:none;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>712</x>
+         <y>287</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>702</x>
+         <y>317</y>
+         <width>371</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-style: solid;
+border-radius: 10px;
+border-width: 2px;
+border-color: #1E36B7;
+background-color: #FFFFFF;
+font-size: 25px;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>160</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: red;
+font-weight:bold;
+font-size: 25px;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>702</x>
+         <y>467</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: #1B7FBD;
+border-style:solid;
+border-width: 2px;
+border-radius: 10px;
+font-size: 20px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Register</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>712</x>
+         <y>157</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 25px;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>E-mail</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>702</x>
+         <y>387</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 20px;
+color: #1E36B7;
+font-weight: bold;
+border-width: 1px;
+border-color: red;
+border-radius: 2px;</string>
+       </property>
+       <property name="text">
+        <string>Forgot password?</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="hide">
+       <property name="geometry">
+        <rect>
+         <x>1032</x>
+         <y>335</y>
+         <width>31</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/register_page/hide.png</normaloff>:/imgs/register_page/hide.png</iconset>
+       </property>
+      </widget>
+      <zorder>lineEdit</zorder>
+      <zorder>pushButton_3</zorder>
+      <zorder>label_4</zorder>
+      <zorder>label</zorder>
+      <zorder>label_7</zorder>
+      <zorder>label_6</zorder>
+      <zorder>label_3</zorder>
+      <zorder>lineEdit_2</zorder>
+      <zorder>label_5</zorder>
+      <zorder>pushButton_2</zorder>
+      <zorder>label_2</zorder>
+      <zorder>pushButton</zorder>
+      <zorder>hide</zorder>
+      <zorder>view</zorder>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="forgot_password">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>1161</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <widget class="QLineEdit" name="id_input_forgot">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>300</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+border-color: #B6AFAF;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+font-size: 20px;
+text-align: center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your ID ...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="verifyidentity">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>300</y>
+         <width>211</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 17px;
+background-color: #112f91;
+font-weight: bold;
+font-size: 20px;
+color: white;</string>
+       </property>
+       <property name="text">
+        <string>Verify your identity</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>20</y>
+         <width>271</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter your&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Verification code&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #000000;
+font-weight: bold;
+font-size: 30px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Forgot Password&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Page&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>150</y>
+         <width>241</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: grey;
+font-weight: bold;
+font-size: 16px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter Your ID&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;to make new password&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="newpassword_input">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>400</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+border-color: #B6AFAF;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+font-size: 20px;
+text-align: center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter New Password</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="confirmnew">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>460</y>
+         <width>211</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 17px;
+background-color: #112f91;
+font-weight: bold;
+font-size: 20px;
+color: white;</string>
+       </property>
+       <property name="text">
+        <string>Confirm</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>80</y>
+         <width>31</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/imgs/login_page/code.svg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="email_input_forgot">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>230</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+border-color: #B6AFAF;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+font-size: 20px;
+text-align: center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter Your Email...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_hide_forgot">
+       <property name="geometry">
+        <rect>
+         <x>674</x>
+         <y>416</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/hide.png</normaloff>:/imgs/sellereyepass/hide.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eyepassword_view_forgot">
+       <property name="geometry">
+        <rect>
+         <x>674</x>
+         <y>416</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/imgs/sellereyepass/view.png</normaloff>:/imgs/sellereyepass/view.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="back_btn">
+       <property name="geometry">
+        <rect>
+         <x>980</x>
+         <y>528</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: bold;
+color: white;
+background-color: black;
+border-radius: 3px;</string>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1167</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
